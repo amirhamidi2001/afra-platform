@@ -11,6 +11,7 @@ from .serializers import (
     SendOTPSerializer,
     VerifyOTPSerializer,
     TeacherProfileSerializer,
+    CheckAvailabilitySerializer,
 )
 from .models import TeacherProfile
 
@@ -218,3 +219,33 @@ class LogoutView(APIView):
             return Response(
                 {"error": "خطا در خروج از سیستم"}, status=status.HTTP_400_BAD_REQUEST
             )
+
+
+class CheckAvailabilityView(APIView):
+    """
+    API to check if a username or email is already registered
+    """
+
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        serializer = CheckAvailabilitySerializer(data=request.data)
+        if serializer.is_valid():
+            username = serializer.validated_data.get("username")
+            email = serializer.validated_data.get("email")
+
+            response_data = {"exists": False}
+
+            if username:
+                if User.objects.filter(username__iexact=username).exists():
+                    response_data["exists"] = True
+                    response_data["message"] = "این نام کاربری قبلاً انتخاب شده است"
+
+            elif email:
+                if User.objects.filter(email__iexact=email).exists():
+                    response_data["exists"] = True
+                    response_data["message"] = "این ایمیل قبلاً ثبت شده است"
+
+            return Response(response_data, status=status.HTTP_200_OK)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

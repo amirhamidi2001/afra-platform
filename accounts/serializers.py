@@ -256,3 +256,19 @@ class VerifyOTPSerializer(serializers.Serializer):
             raise serializers.ValidationError({"otp_code": "کد تأیید نادرست است"})
 
         return attrs
+
+
+class CheckAvailabilitySerializer(serializers.Serializer):
+    """
+    Serializer to validate username or email availability checks
+    """
+
+    username = serializers.CharField(required=False, min_length=3)
+    email = serializers.EmailField(required=False)
+
+    def validate(self, attrs):
+        if not attrs.get("username") and not attrs.get("email"):
+            raise serializers.ValidationError(
+                "وارد کردن نام کاربری یا ایمیل الزامی است"
+            )
+        return attrs

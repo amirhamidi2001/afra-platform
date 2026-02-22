@@ -8,6 +8,7 @@ from .views import (
     UserProfileView,
     TeacherProfileView,
     LogoutView,
+    CheckAvailabilityView,
 )
 
 app_name = "accounts"
@@ -21,4 +22,9 @@ urlpatterns = [
     path("profile/", UserProfileView.as_view(), name="user-profile"),
     path("teacher-profile/", TeacherProfileView.as_view(), name="teacher-profile"),
     path("token/refresh/", TokenRefreshView.as_view(), name="token-refresh"),
+    path(
+        "check-availability/",
+        CheckAvailabilityView.as_view(),
+        name="check-availability",
+    ),
 ]
