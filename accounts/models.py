@@ -103,7 +103,10 @@ class TeacherProfile(models.Model):
     trial_session = models.BooleanField(
         default=False, verbose_name="جلسه آزمایشی رایگان"
     )
-
+    levels = models.JSONField(default=list, blank=True, verbose_name="سطوح تدریس")
+    available_times = models.JSONField(
+        default=list, blank=True, verbose_name="زمان‌های آزاد"
+    )
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="تاریخ ایجاد")
     updated_at = models.DateTimeField(auto_now=True, verbose_name="تاریخ بروزرسانی")
 
