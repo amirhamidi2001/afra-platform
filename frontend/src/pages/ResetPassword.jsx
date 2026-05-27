@@ -1,143 +1,145 @@
-import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { authApi, extractError } from "../services/api";
 
 export default function ResetPassword() {
-  useEffect(() => {
-    AOS.init({ duration: 800, once: true });
-  }, []);
-
-  const navigate = useNavigate();
   const { token } = useParams();
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate();
+
+  const [form, setForm] = useState({ new_password: "", confirm_password: "" });
   const [showPassword, setShowPassword] = useState(false);
-  const [showConfirm, setShowConfirm] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState({});
-  const [loading, setLoading] = useState(false);
-  const [serverMessage, setServerMessage] = useState("");
+  const [success, setSuccess] = useState(false);
+
+  const handleChange = (e) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setErrors((prev) => ({ ...prev, [e.target.name]: "", general: "" }));
+  };
 
   const validate = () => {
-    const newErrors = {};
-    if (!password) newErrors.password = "رمز عبور را وارد کنید";
-    else if (password.length < 6) newErrors.password = "رمز عبور باید حداقل ۶ کاراکتر باشد";
-    if (password !== confirmPassword) newErrors.confirmPassword = "رمز عبور با تکرار آن مطابقت ندارد";
-    return newErrors;
+    const errs = {};
+    if (!form.new_password) errs.new_password = "رمز عبور جدید الزامی است.";
+    else if (form.new_password.length < 8) errs.new_password = "رمز عبور باید حداقل ۸ کاراکتر باشد.";
+    if (form.new_password !== form.confirm_password)
+      errs.confirm_password = "رمز عبور و تکرار آن مطابقت ندارند.";
+    return errs;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const newErrors = validate();
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-      return;
+    const errs = validate();
+    if (Object.keys(errs).length) { setErrors(errs); return; }
+
+    setIsLoading(true);
+    try {
+      await authApi.resetPassword(token, form.new_password, form.confirm_password);
+      setSuccess(true);
+      setTimeout(() => navigate("/login", { replace: true }), 3000);
+    } catch (err) {
+      setErrors({ general: extractError(err) });
+    } finally {
+      setIsLoading(false);
     }
-    setErrors({});
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setServerMessage("رمز عبور شما با موفقیت تغییر کرد.");
-      setTimeout(() => navigate("/login"), 2000);
-    }, 1500);
   };
 
-  return (
-    <main>
-      <div className="bg-gray-100 py-12 border-b">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-          <h1 className="text-3xl font-bold text-gray-800">بازنشانی رمز عبور</h1>
-          <nav className="text-sm">
-            <ol className="flex gap-2">
-              <li><a href="/" className="text-emerald-600 hover:underline">خانه</a></li>
-              <li className="text-gray-500">/</li>
-              <li className="text-gray-600">تعیین رمز جدید</li>
-            </ol>
-          </nav>
+  if (!token) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+        <div className="text-center" dir="rtl">
+          <p className="text-red-600 text-sm mb-4">لینک بازنشانی رمز عبور نامعتبر است.</p>
+          <Link to="/forgot-password" className="text-emerald-600 hover:underline text-sm">
+            درخواست لینک جدید
+          </Link>
         </div>
       </div>
+    );
+  }
 
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 max-w-md" data-aos="fade-up" data-aos-delay="100">
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden border p-6 md:p-8">
-            <div className="text-center mb-6">
-              <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="bi bi-key text-3xl text-emerald-600"></i>
-              </div>
-              <h3 className="text-2xl font-bold">رمز عبور جدید خود را وارد کنید</h3>
-              <p className="text-gray-500 mt-2">رمز عبور باید حداقل ۶ کاراکتر باشد.</p>
-            </div>
-
-            {serverMessage && (
-              <div className="mb-4 p-3 rounded-lg text-center bg-emerald-100 text-emerald-700">
-                {serverMessage}
-              </div>
-            )}
-
-            <form onSubmit={handleSubmit}>
-              <div className="relative mb-4">
-                <i className="bi bi-lock absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
-                <input
-                  type={showPassword ? "text" : "password"}
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className={`w-full border ${errors.password ? 'border-red-500' : 'border-gray-300'} rounded-lg py-3 pr-10 pl-10 focus:outline-none focus:ring-2 focus:ring-emerald-500`}
-                  placeholder="رمز عبور جدید"
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-emerald-600"
-                >
-                  <i className={`bi ${showPassword ? "bi-eye-slash" : "bi-eye"}`}></i>
-                </button>
-                {errors.password && <p className="text-red-500 text-xs mt-1">{errors.password}</p>}
-              </div>
-
-              <div className="relative mb-6">
-                <i className="bi bi-lock-fill absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
-                <input
-                  type={showConfirm ? "text" : "password"}
-                  value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)}
-                  className={`w-full border ${errors.confirmPassword ? 'border-red-500' : 'border-gray-300'} rounded-lg py-3 pr-10 pl-10 focus:outline-none focus:ring-2 focus:ring-emerald-500`}
-                  placeholder="تکرار رمز عبور"
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowConfirm(!showConfirm)}
-                  className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-emerald-600"
-                >
-                  <i className={`bi ${showConfirm ? "bi-eye-slash" : "bi-eye"}`}></i>
-                </button>
-                {errors.confirmPassword && <p className="text-red-500 text-xs mt-1">{errors.confirmPassword}</p>}
-              </div>
-
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full bg-emerald-600 text-white py-3 rounded-full font-semibold hover:bg-emerald-700 transition disabled:opacity-50 flex items-center justify-center gap-2"
-              >
-                {loading ? (
-                  <>
-                    <i className="bi bi-arrow-repeat bi-spin"></i> در حال بازنشانی...
-                  </>
-                ) : (
-                  <>
-                    بازنشانی رمز عبور <i className="bi bi-arrow-left"></i>
-                  </>
-                )}
-              </button>
-            </form>
-
-            <div className="text-center mt-6">
-              <a href="/login" className="text-emerald-600 hover:underline">
-                <i className="bi bi-arrow-right ml-1"></i> بازگشت به صفحه ورود
-              </a>
-            </div>
+  if (success) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+        <div className="w-full max-w-sm bg-white rounded-2xl shadow-lg p-8 text-center" dir="rtl">
+          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100">
+            <svg className="h-8 w-8 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
           </div>
+          <h2 className="text-lg font-bold text-gray-900 mb-2">رمز عبور تغییر کرد!</h2>
+          <p className="text-sm text-gray-600">در حال انتقال به صفحه ورود…</p>
         </div>
-      </section>
-    </main>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+      <div className="w-full max-w-sm bg-white rounded-2xl shadow-lg p-8">
+        <div className="text-center mb-8" dir="rtl">
+          <h1 className="text-xl font-bold text-gray-900">تعیین رمز عبور جدید</h1>
+          <p className="mt-1 text-sm text-gray-500">رمز عبور جدید خود را وارد کنید.</p>
+        </div>
+
+        {errors.general && (
+          <div className="mb-4 rounded-lg bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-700 text-right">
+            {errors.general}
+          </div>
+        )}
+
+        <form onSubmit={handleSubmit} noValidate className="space-y-5" dir="rtl">
+          {/* New password */}
+          <div>
+            <label htmlFor="new_password" className="block text-sm font-medium text-gray-700 mb-1">
+              رمز عبور جدید
+            </label>
+            <div className="relative">
+              <input
+                id="new_password" name="new_password"
+                type={showPassword ? "text" : "password"}
+                value={form.new_password} onChange={handleChange}
+                autoComplete="new-password" placeholder="حداقل ۸ کاراکتر"
+                className={`w-full rounded-lg border px-4 py-2.5 pr-10 text-sm transition
+                  focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent
+                  ${errors.new_password ? "border-red-400 bg-red-50" : "border-gray-300"}`}
+              />
+              <button type="button" tabIndex={-1}
+                onClick={() => setShowPassword((v) => !v)}
+                className="absolute left-3 top-1/2 -translate-y-1/2 text-xs text-gray-400 hover:text-gray-600"
+              >
+                {showPassword ? "پنهان" : "نمایش"}
+              </button>
+            </div>
+            {errors.new_password && <p className="mt-1 text-xs text-red-600">{errors.new_password}</p>}
+          </div>
+
+          {/* Confirm password */}
+          <div>
+            <label htmlFor="confirm_password" className="block text-sm font-medium text-gray-700 mb-1">
+              تکرار رمز عبور
+            </label>
+            <input
+              id="confirm_password" name="confirm_password"
+              type={showPassword ? "text" : "password"}
+              value={form.confirm_password} onChange={handleChange}
+              autoComplete="new-password" placeholder="تکرار رمز عبور جدید"
+              className={`w-full rounded-lg border px-4 py-2.5 text-sm transition
+                focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent
+                ${errors.confirm_password ? "border-red-400 bg-red-50" : "border-gray-300"}`}
+            />
+            {errors.confirm_password && (
+              <p className="mt-1 text-xs text-red-600">{errors.confirm_password}</p>
+            )}
+          </div>
+
+          <button
+            type="submit" disabled={isLoading}
+            className="w-full rounded-lg bg-emerald-600 py-2.5 text-sm font-semibold text-white
+                       hover:bg-emerald-700 disabled:opacity-60 disabled:cursor-not-allowed transition"
+          >
+            {isLoading ? "در حال ذخیره…" : "ذخیره رمز عبور جدید"}
+          </button>
+        </form>
+      </div>
+    </div>
   );
 }
