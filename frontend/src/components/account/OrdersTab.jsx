@@ -103,7 +103,7 @@ export default function OrdersTab() {
     switch (status) {
       case "processing": return "bg-yellow-100 text-yellow-800";
       case "shipped": return "bg-blue-100 text-blue-800";
-      case "delivered": return "bg-emerald-100 text-emerald-800";
+      case "delivered": return "bg-teal-100 text-teal-800";
       case "cancelled": return "bg-red-100 text-red-800";
       default: return "bg-gray-100 text-gray-800";
     }
@@ -143,13 +143,13 @@ export default function OrdersTab() {
                 </span>
                 <button
                   onClick={() => toggleTracking(order.id)}
-                  className="text-sm text-emerald-600 hover:underline"
+                  className="text-sm text-teal-600 hover:underline"
                 >
                   پیگیری سفارش
                 </button>
                 <button
                   onClick={() => toggleDetails(order.id)}
-                  className="text-sm text-emerald-600 hover:underline"
+                  className="text-sm text-teal-600 hover:underline"
                 >
                   جزئیات
                 </button>
@@ -183,7 +183,7 @@ export default function OrdersTab() {
                 <div className="relative pr-8 space-y-6">
                   {order.tracking.steps.map((step, idx) => (
                     <div key={idx} className="relative">
-                      <div className={`absolute right-0 w-4 h-4 rounded-full border-2 ${step.completed ? 'bg-emerald-500 border-emerald-500' : (step.active ? 'bg-blue-500 border-blue-500 animate-pulse' : 'bg-white border-gray-300')}`}></div>
+                      <div className={`absolute right-0 w-4 h-4 rounded-full border-2 ${step.completed ? 'bg-teal-500 border-teal-500' : (step.active ? 'bg-blue-500 border-blue-500 animate-pulse' : 'bg-white border-gray-300')}`}></div>
                       <div className="mr-6">
                         <h5 className="font-semibold">{step.title}</h5>
                         {step.date && <p className="text-sm text-gray-500">{step.date}</p>}
@@ -245,7 +245,7 @@ export default function OrdersTab() {
 
       <div className="flex justify-center gap-2 mt-8">
         <button disabled className="px-3 py-1 border rounded disabled:opacity-50"><i className="bi bi-chevron-right"></i></button>
-        <button className="px-3 py-1 bg-emerald-600 text-white rounded">1</button>
+        <button className="px-3 py-1 bg-teal-600 text-white rounded">1</button>
         <button className="px-3 py-1 border rounded hover:bg-gray-100">2</button>
         <button className="px-3 py-1 border rounded hover:bg-gray-100">3</button>
         <span className="px-3 py-1">...</span>

@@ -39,7 +39,7 @@ export default function Courses() {
     <section className="py-16 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12" data-aos="fade-up">
-          <h2 className="text-emerald-600 font-semibold tracking-wide text-sm">دوره‌ها</h2>
+          <h2 className="text-teal-600 font-semibold tracking-wide text-sm">دوره‌ها</h2>
           <p className="text-3xl md:text-4xl font-bold text-gray-800">دوره‌های محبوب</p>
         </div>
 
@@ -58,7 +58,7 @@ export default function Courses() {
               />
               <div className="p-4">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="bg-emerald-100 text-emerald-700 text-xs px-2 py-1 rounded">
+                  <span className="bg-teal-100 text-teal-700 text-xs px-2 py-1 rounded">
                     {course.category}
                   </span>
                   <span className="font-bold text-gray-800">{course.price}</span>

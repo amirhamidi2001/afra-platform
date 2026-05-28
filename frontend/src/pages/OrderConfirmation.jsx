@@ -66,12 +66,12 @@ export default function OrderConfirmation() {
 
   return (
     <main>
-      <div className="bg-emerald-50 py-12 border-b">
+      <div className="bg-teal-50 py-12 border-b">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
           <h1 className="text-3xl font-bold text-gray-800">تأیید سفارش</h1>
           <nav className="text-sm">
             <ol className="flex gap-2">
-              <li><a href="/" className="text-emerald-600 hover:underline">خانه</a></li>
+              <li><a href="/" className="text-teal-600 hover:underline">خانه</a></li>
               <li className="text-gray-500">/</li>
               <li className="text-gray-600">تأیید سفارش</li>
             </ol>
@@ -83,7 +83,7 @@ export default function OrderConfirmation() {
         <div className="container mx-auto px-4" data-aos="fade-up" data-aos-delay="100">
           <div className="flex flex-wrap -mx-4">
             <div className="w-full lg:w-4/12 px-4 mb-8 lg:mb-0">
-              <div className="bg-gradient-to-br from-emerald-700 to-emerald-800 text-white rounded-xl shadow-lg overflow-hidden sticky top-24">
+              <div className="bg-gradient-to-br from-teal-700 to-teal-800 text-white rounded-xl shadow-lg overflow-hidden sticky top-24">
                 <div className="p-6">
                   <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 relative">
                     <div className="absolute inset-0 rounded-full bg-white/30 animate-ping"></div>
@@ -98,11 +98,11 @@ export default function OrderConfirmation() {
                   <div className="mb-6">
                     <div className="flex flex-col gap-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 bg-white text-emerald-700 rounded-full flex items-center justify-center font-bold">1</div>
+                        <div className="w-8 h-8 bg-white text-teal-700 rounded-full flex items-center justify-center font-bold">1</div>
                         <span className="font-medium">تأیید شده</span>
                       </div>
                       <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 bg-white text-emerald-700 rounded-full flex items-center justify-center font-bold">2</div>
+                        <div className="w-8 h-8 bg-white text-teal-700 rounded-full flex items-center justify-center font-bold">2</div>
                         <span className="font-medium text-white">در حال پردازش</span>
                       </div>
                       <div className="flex items-center gap-3">
@@ -183,7 +183,7 @@ export default function OrderConfirmation() {
                   className="w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition text-right"
                 >
                   <h3 className="font-bold flex items-center gap-2">
-                    <i className="bi bi-geo-alt text-emerald-600"></i>
+                    <i className="bi bi-geo-alt text-teal-600"></i>
                     جزئیات ارسال
                   </h3>
                   <i className={`bi bi-chevron-${openCards.shipping ? "up" : "down"} text-gray-500 transition`}></i>
@@ -216,7 +216,7 @@ export default function OrderConfirmation() {
                   className="w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition text-right"
                 >
                   <h3 className="font-bold flex items-center gap-2">
-                    <i className="bi bi-credit-card text-emerald-600"></i>
+                    <i className="bi bi-credit-card text-teal-600"></i>
                     جزئیات پرداخت
                   </h3>
                   <i className={`bi bi-chevron-${openCards.payment ? "up" : "down"} text-gray-500 transition`}></i>
@@ -224,8 +224,8 @@ export default function OrderConfirmation() {
                 {openCards.payment && (
                   <div className="p-4 border-t">
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center">
-                        <i className="bi bi-credit-card-2-front text-emerald-600 text-xl"></i>
+                      <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center">
+                        <i className="bi bi-credit-card-2-front text-teal-600 text-xl"></i>
                       </div>
                       <div>
                         <div className="font-semibold">{orderData.payment.method}</div>
@@ -246,7 +246,7 @@ export default function OrderConfirmation() {
                   className="w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition text-right"
                 >
                   <h3 className="font-bold flex items-center gap-2">
-                    <i className="bi bi-bag-check text-emerald-600"></i>
+                    <i className="bi bi-bag-check text-teal-600"></i>
                     اقلام سفارش
                   </h3>
                   <i className={`bi bi-chevron-${openCards.items ? "up" : "down"} text-gray-500 transition`}></i>
@@ -283,14 +283,14 @@ export default function OrderConfirmation() {
                 <a href="/" className="flex-1 text-center border border-gray-300 text-gray-700 py-3 rounded-lg hover:bg-gray-50 transition">
                   <i className="bi bi-arrow-right ml-1"></i> بازگشت به فروشگاه
                 </a>
-                <a href="/account" className="flex-1 text-center bg-emerald-600 text-white py-3 rounded-lg hover:bg-emerald-700 transition flex items-center justify-center gap-2">
+                <a href="/account" className="flex-1 text-center bg-teal-600 text-white py-3 rounded-lg hover:bg-teal-700 transition flex items-center justify-center gap-2">
                   <span>مشاهده در حساب کاربری</span>
                   <i className="bi bi-arrow-left"></i>
                 </a>
               </div>
 
               <div data-aos="fade-up">
-                <h3 className="text-xl font-bold mb-4 relative inline-block after:content-[''] after:absolute after:bottom-0 after:right-0 after:w-12 after:h-0.5 after:bg-emerald-600 pb-2">
+                <h3 className="text-xl font-bold mb-4 relative inline-block after:content-[''] after:absolute after:bottom-0 after:right-0 after:w-12 after:h-0.5 after:bg-teal-600 pb-2">
                   ممکن است به اینها نیز علاقه داشته باشید
                 </h3>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -304,8 +304,8 @@ export default function OrderConfirmation() {
                         />
                       </div>
                       <h5 className="font-medium text-sm">{product.name}</h5>
-                      <div className="text-emerald-600 font-bold mt-1">${product.price.toFixed(2)}</div>
-                      <button className="mt-2 w-full bg-white border border-emerald-600 text-emerald-600 py-1 rounded-full text-sm hover:bg-emerald-600 hover:text-white transition flex items-center justify-center gap-1">
+                      <div className="text-teal-600 font-bold mt-1">${product.price.toFixed(2)}</div>
+                      <button className="mt-2 w-full bg-white border border-teal-600 text-teal-600 py-1 rounded-full text-sm hover:bg-teal-600 hover:text-white transition flex items-center justify-center gap-1">
                         <i className="bi bi-plus"></i> افزودن به سبد
                       </button>
                     </div>

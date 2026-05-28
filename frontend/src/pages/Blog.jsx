@@ -115,12 +115,12 @@ export default function Blog() {
 
   return (
     <main>
-      <div className="bg-emerald-50 py-12 border-b">
+      <div className="bg-teal-50 py-12 border-b">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
           <h1 className="text-3xl font-bold text-gray-800">مجله آموزشی</h1>
           <nav className="text-sm">
             <ol className="flex gap-2">
-              <li><a href="/" className="text-emerald-600 hover:underline">خانه</a></li>
+              <li><a href="/" className="text-teal-600 hover:underline">خانه</a></li>
               <li className="text-gray-500">/</li>
               <li className="text-gray-600">مجله</li>
             </ol>
@@ -143,7 +143,7 @@ export default function Blog() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-6 text-white">
                   <div className="flex gap-3 text-sm mb-2">
-                    <span className="bg-emerald-600 px-2 py-1 rounded text-xs">{featuredPost.category}</span>
+                    <span className="bg-teal-600 px-2 py-1 rounded text-xs">{featuredPost.category}</span>
                     <span>{featuredPost.date}</span>
                   </div>
                   <h2 className="text-xl md:text-2xl font-bold mb-2">
@@ -171,14 +171,14 @@ export default function Blog() {
                     />
                     <div className="p-4">
                       <div className="flex gap-2 text-xs text-gray-500 mb-2">
-                        <span className="bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded">{post.category}</span>
+                        <span className="bg-teal-100 text-teal-700 px-2 py-0.5 rounded">{post.category}</span>
                         <span>{post.date}</span>
                       </div>
                       <h3 className="font-bold text-lg mb-2">
-                        <a href="/blog/1" className="hover:text-emerald-600">{post.title}</a>
+                        <a href="/blog/1" className="hover:text-teal-600">{post.title}</a>
                       </h3>
                       <div className="text-sm text-gray-600">
-                        توسط <a href="#" className="hover:text-emerald-600">{post.author}</a>
+                        توسط <a href="#" className="hover:text-teal-600">{post.author}</a>
                       </div>
                     </div>
                   </article>
@@ -190,19 +190,19 @@ export default function Blog() {
               <div className="flex border-b border-gray-200 mb-4">
                 <button
                   onClick={() => setActiveTab("top-stories")}
-                  className={`flex-1 py-2 text-center font-semibold transition ${activeTab === "top-stories" ? "text-emerald-600 border-b-2 border-emerald-600" : "text-gray-500 hover:text-emerald-500"}`}
+                  className={`flex-1 py-2 text-center font-semibold transition ${activeTab === "top-stories" ? "text-teal-600 border-b-2 border-teal-600" : "text-gray-500 hover:text-teal-500"}`}
                 >
                   داغ‌ترین
                 </button>
                 <button
                   onClick={() => setActiveTab("trending")}
-                  className={`flex-1 py-2 text-center font-semibold transition ${activeTab === "trending" ? "text-emerald-600 border-b-2 border-emerald-600" : "text-gray-500 hover:text-emerald-500"}`}
+                  className={`flex-1 py-2 text-center font-semibold transition ${activeTab === "trending" ? "text-teal-600 border-b-2 border-teal-600" : "text-gray-500 hover:text-teal-500"}`}
                 >
                   پرطرفدار
                 </button>
                 <button
                   onClick={() => setActiveTab("latest")}
-                  className={`flex-1 py-2 text-center font-semibold transition ${activeTab === "latest" ? "text-emerald-600 border-b-2 border-emerald-600" : "text-gray-500 hover:text-emerald-500"}`}
+                  className={`flex-1 py-2 text-center font-semibold transition ${activeTab === "latest" ? "text-teal-600 border-b-2 border-teal-600" : "text-gray-500 hover:text-teal-500"}`}
                 >
                   جدیدترین
                 </button>
@@ -217,9 +217,9 @@ export default function Blog() {
                       className="w-20 h-20 object-cover rounded-md"
                     />
                     <div className="flex-1">
-                      <span className="text-xs text-emerald-600">{item.category}</span>
+                      <span className="text-xs text-teal-600">{item.category}</span>
                       <h4 className="text-sm font-semibold line-clamp-2">
-                        <a href="/blog/1" className="hover:text-emerald-600">{item.title}</a>
+                        <a href="/blog/1" className="hover:text-teal-600">{item.title}</a>
                       </h4>
                       <div className="text-xs text-gray-500 mt-1">توسط {item.author}</div>
                     </div>
@@ -234,7 +234,7 @@ export default function Blog() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10" data-aos="fade-up">
-            <h2 className="text-emerald-600 font-semibold tracking-wide text-sm">آخرین مطالب</h2>
+            <h2 className="text-teal-600 font-semibold tracking-wide text-sm">آخرین مطالب</h2>
             <p className="text-3xl md:text-4xl font-bold text-gray-800">از مجله ما</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -251,9 +251,9 @@ export default function Blog() {
                   className="w-full h-56 object-cover"
                 />
                 <div className="p-5">
-                  <p className="text-emerald-600 text-sm mb-2">{post.category}</p>
+                  <p className="text-teal-600 text-sm mb-2">{post.category}</p>
                   <h3 className="text-xl font-bold mb-3 line-clamp-2">
-                    <a href="/blog/1" className="hover:text-emerald-600">{post.title}</a>
+                    <a href="/blog/1" className="hover:text-teal-600">{post.title}</a>
                   </h3>
                   <div className="flex items-center gap-3 mt-4">
                     <img
@@ -280,7 +280,7 @@ export default function Blog() {
               <li>
                 <button
                   onClick={() => currentPage > 1 && setCurrentPage(currentPage - 1)}
-                  className="px-3 py-2 rounded-md border border-gray-300 hover:bg-emerald-600 hover:text-white transition"
+                  className="px-3 py-2 rounded-md border border-gray-300 hover:bg-teal-600 hover:text-white transition"
                 >
                   <i className="bi bi-arrow-right"></i> {/* RTL: arrow-right means previous */}
                   <span className="hidden sm:inline mr-1">قبلی</span>
@@ -296,8 +296,8 @@ export default function Blog() {
                       onClick={() => setCurrentPage(page)}
                       className={`px-3 py-2 rounded-md border transition ${
                         currentPage === page
-                          ? "bg-emerald-600 text-white border-emerald-600"
-                          : "border-gray-300 hover:bg-emerald-100"
+                          ? "bg-teal-600 text-white border-teal-600"
+                          : "border-gray-300 hover:bg-teal-100"
                       }`}
                     >
                       {page}
@@ -309,7 +309,7 @@ export default function Blog() {
               <li>
                 <button
                   onClick={() => currentPage < totalPages && setCurrentPage(currentPage + 1)}
-                  className="px-3 py-2 rounded-md border border-gray-300 hover:bg-emerald-600 hover:text-white transition"
+                  className="px-3 py-2 rounded-md border border-gray-300 hover:bg-teal-600 hover:text-white transition"
                 >
                   <span className="hidden sm:inline ml-1">بعدی</span>
                   <i className="bi bi-arrow-left"></i>

@@ -37,13 +37,13 @@ export default function Trainers() {
                 alt={trainer.name}
               />
               <h4 className="mt-4 text-xl font-bold">{trainer.name}</h4>
-              <span className="text-emerald-600 text-sm">{trainer.field}</span>
+              <span className="text-teal-600 text-sm">{trainer.field}</span>
               <p className="text-gray-600 text-sm mt-2">{trainer.desc}</p>
               <div className="flex justify-center gap-3 mt-4">
-                <a href="#" className="text-gray-500 hover:text-emerald-600"><i className="bi bi-twitter-x"></i></a>
-                <a href="#" className="text-gray-500 hover:text-emerald-600"><i className="bi bi-facebook"></i></a>
-                <a href="#" className="text-gray-500 hover:text-emerald-600"><i className="bi bi-instagram"></i></a>
-                <a href="#" className="text-gray-500 hover:text-emerald-600"><i className="bi bi-linkedin"></i></a>
+                <a href="#" className="text-gray-500 hover:text-teal-600"><i className="bi bi-twitter-x"></i></a>
+                <a href="#" className="text-gray-500 hover:text-teal-600"><i className="bi bi-facebook"></i></a>
+                <a href="#" className="text-gray-500 hover:text-teal-600"><i className="bi bi-instagram"></i></a>
+                <a href="#" className="text-gray-500 hover:text-teal-600"><i className="bi bi-linkedin"></i></a>
               </div>
             </div>
           ))}

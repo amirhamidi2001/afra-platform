@@ -127,14 +127,14 @@ export default function BlogDetails() {
 
   return (
     <main>
-      <div className="bg-emerald-50 py-12 border-b">
+      <div className="bg-teal-50 py-12 border-b">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
           <h1 className="text-3xl font-bold text-gray-800">جزئیات مقاله</h1>
           <nav className="text-sm">
             <ol className="flex gap-2">
-              <li><a href="/" className="text-emerald-600 hover:underline">خانه</a></li>
+              <li><a href="/" className="text-teal-600 hover:underline">خانه</a></li>
               <li className="text-gray-500">/</li>
-              <li><a href="/blog" className="text-emerald-600 hover:underline">مجله</a></li>
+              <li><a href="/blog" className="text-teal-600 hover:underline">مجله</a></li>
               <li className="text-gray-500">/</li>
               <li className="text-gray-600">جزئیات مقاله</li>
             </ol>
@@ -146,8 +146,8 @@ export default function BlogDetails() {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-8">
             <div className="flex justify-center gap-2 mb-4" data-aos="fade-up">
-              <a href="#" className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm">تکنولوژی</a>
-              <a href="#" className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm">نوآوری</a>
+              <a href="#" className="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm">تکنولوژی</a>
+              <a href="#" className="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm">نوآوری</a>
             </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6" data-aos="fade-up" data-aos-delay="100">
               تکامل طراحی رابط کاربری: از اسکیومورفیسم تا نئومورفیسم
@@ -175,14 +175,14 @@ export default function BlogDetails() {
           <div className="grid lg:grid-cols-12 gap-8">
             <aside className="lg:col-span-3" data-aos="fade-left">
               <div className="sticky top-24 bg-gray-50 p-5 rounded-lg shadow-sm">
-                <h3 className="font-bold text-lg border-r-4 border-emerald-600 pr-3 mb-4">فهرست مطالب</h3>
+                <h3 className="font-bold text-lg border-r-4 border-teal-600 pr-3 mb-4">فهرست مطالب</h3>
                 <nav>
                   <ul className="space-y-2">
                     {tocItems.map((item) => (
                       <li key={item.id}>
                         <a
                           href={`#${item.id}`}
-                          className="text-gray-600 hover:text-emerald-600 transition block py-1"
+                          className="text-gray-600 hover:text-teal-600 transition block py-1"
                         >
                           {item.title}
                         </a>
@@ -201,7 +201,7 @@ export default function BlogDetails() {
                 <p className="text-gray-600 leading-relaxed">
                   از روزهای اولیه رابط‌های کاربری گرافیکی تا سیستم‌های طراحی پیچیده امروزی، تکامل طراحی UI نه تنها منعکس‌کننده پیشرفت تکنولوژی است، بلکه تغییر انتظارات کاربران و تحولات فرهنگی در نحوه تعامل ما با محصولات دیجیتال را نیز نشان می‌دهد.
                 </p>
-                <div className="bg-emerald-50 border-r-4 border-emerald-600 p-5 my-6 italic">
+                <div className="bg-teal-50 border-r-4 border-teal-600 p-5 my-6 italic">
                   <p className="text-gray-700">«طراحی فقط ظاهر و احساس نیست. طراحی نحوه کار کردن است.»</p>
                   <cite className="text-sm text-gray-500 block mt-2">استیو جابز</cite>
                 </div>
@@ -218,14 +218,14 @@ export default function BlogDetails() {
                 </p>
                 <div className="grid md:grid-cols-2 gap-4 my-5">
                   <div className="flex gap-3 items-start bg-gray-50 p-3 rounded">
-                    <i className="bi bi-layers text-2xl text-emerald-600"></i>
+                    <i className="bi bi-layers text-2xl text-teal-600"></i>
                     <div>
                       <h4 className="font-bold">بافت‌های واقع‌گرایانه</h4>
                       <p className="text-sm text-gray-600">نمایش دقیق موادی مانند چرم، فلز و کاغذ</p>
                     </div>
                   </div>
                   <div className="flex gap-3 items-start bg-gray-50 p-3 rounded">
-                    <i className="bi bi-lightbulb text-2xl text-emerald-600"></i>
+                    <i className="bi bi-lightbulb text-2xl text-teal-600"></i>
                     <div>
                       <h4 className="font-bold">استعاره‌های آشنا</h4>
                       <p className="text-sm text-gray-600">عناصر دیجیتال تقلیدکننده از نمونه‌های فیزیکی</p>
@@ -241,7 +241,7 @@ export default function BlogDetails() {
                 </p>
                 <div className="grid md:grid-cols-2 gap-6 my-5">
                   <div className="border rounded-lg p-4 shadow-sm">
-                    <i className="bi bi-check-circle text-emerald-600 text-xl"></i>
+                    <i className="bi bi-check-circle text-teal-600 text-xl"></i>
                     <h4 className="font-bold mt-2">مزایا</h4>
                     <ul className="list-disc list-inside text-sm text-gray-600 mt-1">
                       <li>زمان بارگذاری بهبودیافته</li>
@@ -268,17 +268,17 @@ export default function BlogDetails() {
                 </p>
                 <div className="grid md:grid-cols-3 gap-4 my-5">
                   <div className="text-center p-4 bg-gray-50 rounded">
-                    <span className="inline-block bg-emerald-600 text-white w-8 h-8 rounded-full leading-8 mb-2">۰۱</span>
+                    <span className="inline-block bg-teal-600 text-white w-8 h-8 rounded-full leading-8 mb-2">۰۱</span>
                     <h4 className="font-bold">خواص فیزیکی</h4>
                     <p className="text-sm text-gray-600">سطوح و لبه‌ها نشانه‌های تعاملی معنی‌دار ارائه می‌دهند</p>
                   </div>
                   <div className="text-center p-4 bg-gray-50 rounded">
-                    <span className="inline-block bg-emerald-600 text-white w-8 h-8 rounded-full leading-8 mb-2">۰۲</span>
+                    <span className="inline-block bg-teal-600 text-white w-8 h-8 rounded-full leading-8 mb-2">۰۲</span>
                     <h4 className="font-bold">گرافیک جسورانه</h4>
                     <p className="text-sm text-gray-600">انتخاب‌های رنگی عمدی و فضای سفید هدفمند</p>
                   </div>
                   <div className="text-center p-4 bg-gray-50 rounded">
-                    <span className="inline-block bg-emerald-600 text-white w-8 h-8 rounded-full leading-8 mb-2">۰۳</span>
+                    <span className="inline-block bg-teal-600 text-white w-8 h-8 rounded-full leading-8 mb-2">۰۳</span>
                     <h4 className="font-bold">حرکت معنادار</h4>
                     <p className="text-sm text-gray-600">انیمیشن اعمال کاربر را اطلاع‌رسانی و تقویت می‌کند</p>
                   </div>
@@ -306,17 +306,17 @@ export default function BlogDetails() {
                 </p>
                 <div className="grid md:grid-cols-3 gap-5 my-5">
                   <div className="text-center p-4 shadow rounded-lg hover:shadow-md transition">
-                    <i className="bi bi-phone text-3xl text-emerald-600"></i>
+                    <i className="bi bi-phone text-3xl text-teal-600"></i>
                     <h4 className="font-bold mt-2">رابط‌های تطبیقی</h4>
                     <p className="text-sm text-gray-600">رابط‌هایی که بر اساس رفتار و ترجیحات کاربر به طور خودکار تنظیم می‌شوند</p>
                   </div>
                   <div className="text-center p-4 shadow rounded-lg hover:shadow-md transition">
-                    <i className="bi bi-eye text-3xl text-emerald-600"></i>
+                    <i className="bi bi-eye text-3xl text-teal-600"></i>
                     <h4 className="font-bold mt-2">تجارب فراگیر</h4>
                     <p className="text-sm text-gray-600">ادغام عناصر واقعیت افزوده و واقعیت مجازی در رابط‌های روزمره</p>
                   </div>
                   <div className="text-center p-4 shadow rounded-lg hover:shadow-md transition">
-                    <i className="bi bi-hand-index text-3xl text-emerald-600"></i>
+                    <i className="bi bi-hand-index text-3xl text-teal-600"></i>
                     <h4 className="font-bold mt-2">کنترل‌های حرکتی</h4>
                     <p className="text-sm text-gray-600">تعاملات پیشرفته مبتنی بر حرکت و ژست</p>
                   </div>
@@ -343,11 +343,11 @@ export default function BlogDetails() {
             <div>
               <h4 className="font-bold text-lg mb-3">موضوعات مرتبط</h4>
               <div className="flex flex-wrap gap-2">
-                <a href="#" className="bg-gray-100 hover:bg-emerald-100 text-gray-700 px-3 py-1 rounded-full text-sm transition">طراحی UI</a>
-                <a href="#" className="bg-gray-100 hover:bg-emerald-100 text-gray-700 px-3 py-1 rounded-full text-sm transition">تجربه کاربری</a>
-                <a href="#" className="bg-gray-100 hover:bg-emerald-100 text-gray-700 px-3 py-1 rounded-full text-sm transition">روندهای طراحی</a>
-                <a href="#" className="bg-gray-100 hover:bg-emerald-100 text-gray-700 px-3 py-1 rounded-full text-sm transition">نوآوری</a>
-                <a href="#" className="bg-gray-100 hover:bg-emerald-100 text-gray-700 px-3 py-1 rounded-full text-sm transition">تکنولوژی</a>
+                <a href="#" className="bg-gray-100 hover:bg-teal-100 text-gray-700 px-3 py-1 rounded-full text-sm transition">طراحی UI</a>
+                <a href="#" className="bg-gray-100 hover:bg-teal-100 text-gray-700 px-3 py-1 rounded-full text-sm transition">تجربه کاربری</a>
+                <a href="#" className="bg-gray-100 hover:bg-teal-100 text-gray-700 px-3 py-1 rounded-full text-sm transition">روندهای طراحی</a>
+                <a href="#" className="bg-gray-100 hover:bg-teal-100 text-gray-700 px-3 py-1 rounded-full text-sm transition">نوآوری</a>
+                <a href="#" className="bg-gray-100 hover:bg-teal-100 text-gray-700 px-3 py-1 rounded-full text-sm transition">تکنولوژی</a>
               </div>
             </div>
           </div>
@@ -358,7 +358,7 @@ export default function BlogDetails() {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="flex justify-between items-center mb-6">
             <h3 className="text-2xl font-bold text-gray-800">نظرات کاربران</h3>
-            <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm">{comments.length} نظر</span>
+            <span className="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm">{comments.length} نظر</span>
           </div>
 
           <div className="space-y-8">
@@ -379,7 +379,7 @@ export default function BlogDetails() {
                     <p className="text-gray-700 mt-2">{comment.text}</p>
                     <button
                       onClick={() => setReplyTo(replyTo === comment.id ? null : comment.id)}
-                      className="mt-3 text-sm text-emerald-600 hover:underline flex items-center gap-1"
+                      className="mt-3 text-sm text-teal-600 hover:underline flex items-center gap-1"
                     >
                       <i className="bi bi-chat"></i> پاسخ
                     </button>
@@ -389,7 +389,7 @@ export default function BlogDetails() {
                         <textarea
                           rows="2"
                           placeholder="پاسخ خود را بنویسید..."
-                          className="w-full p-2 border rounded focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                          className="w-full p-2 border rounded focus:outline-none focus:ring-1 focus:ring-teal-500"
                           id={`reply-${comment.id}`}
                         />
                         <div className="flex gap-2 mt-2">
@@ -399,7 +399,7 @@ export default function BlogDetails() {
                               submitReply(comment.id, replyText);
                               document.getElementById(`reply-${comment.id}`).value = "";
                             }}
-                            className="bg-emerald-600 text-white px-3 py-1 rounded text-sm hover:bg-emerald-700"
+                            className="bg-teal-600 text-white px-3 py-1 rounded text-sm hover:bg-teal-700"
                           >
                             ارسال پاسخ
                           </button>
@@ -450,7 +450,7 @@ export default function BlogDetails() {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className={`w-full border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                  className={`w-full border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500`}
                   placeholder="نام خود را وارد کنید"
                 />
                 {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
@@ -462,7 +462,7 @@ export default function BlogDetails() {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className={`w-full border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                  className={`w-full border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500`}
                   placeholder="ایمیل خود را وارد کنید"
                 />
                 {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
@@ -475,7 +475,7 @@ export default function BlogDetails() {
                 name="website"
                 value={formData.website}
                 onChange={handleInputChange}
-                className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
                 placeholder="آدرس وبسایت شما"
               />
             </div>
@@ -486,13 +486,13 @@ export default function BlogDetails() {
                 rows="5"
                 value={formData.comment}
                 onChange={handleInputChange}
-                className={`w-full border ${errors.comment ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                className={`w-full border ${errors.comment ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500`}
                 placeholder="نظر خود را بنویسید..."
               ></textarea>
               {errors.comment && <p className="text-red-500 text-xs mt-1">{errors.comment}</p>}
             </div>
             <div className="text-center">
-              <button type="submit" className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-full font-semibold transition">
+              <button type="submit" className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-full font-semibold transition">
                 ارسال نظر
               </button>
             </div>

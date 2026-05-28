@@ -19,12 +19,12 @@ export default function Account() {
 
   return (
     <main>
-      <div className="bg-emerald-50 py-12 border-b">
+      <div className="bg-teal-50 py-12 border-b">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
           <h1 className="text-3xl font-bold text-gray-800">حساب کاربری</h1>
           <nav className="text-sm">
             <ol className="flex gap-2">
-              <li><a href="/" className="text-emerald-600 hover:underline">خانه</a></li>
+              <li><a href="/" className="text-teal-600 hover:underline">خانه</a></li>
               <li className="text-gray-500">/</li>
               <li className="text-gray-600">حساب کاربری</li>
             </ol>

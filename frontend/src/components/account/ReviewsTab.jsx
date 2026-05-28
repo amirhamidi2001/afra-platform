@@ -31,7 +31,7 @@ export default function ReviewsTab() {
                 <div className="text-xs text-gray-400 mt-1">{review.date}</div>
                 <p className="text-gray-700 mt-2">{review.text}</p>
                 <div className="flex gap-3 mt-3">
-                  <button className="text-sm text-emerald-600 hover:underline">ویرایش نظر</button>
+                  <button className="text-sm text-teal-600 hover:underline">ویرایش نظر</button>
                   <button className="text-sm text-red-600 hover:underline">حذف</button>
                 </div>
               </div>

@@ -23,7 +23,7 @@ export default function NotFound() {
           <h1 className="text-3xl font-bold text-gray-800">404</h1>
           <nav className="text-sm">
             <ol className="flex gap-2">
-              <li><Link to="/" className="text-emerald-600 hover:underline">خانه</Link></li>
+              <li><Link to="/" className="text-teal-600 hover:underline">خانه</Link></li>
               <li className="text-gray-500">/</li>
               <li className="text-gray-600">404</li>
             </ol>
@@ -33,7 +33,7 @@ export default function NotFound() {
 
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-2xl text-center">
-          <div className="text-8xl text-emerald-300 mb-6" data-aos="zoom-in" data-aos-delay="100">
+          <div className="text-8xl text-teal-300 mb-6" data-aos="zoom-in" data-aos-delay="100">
             <i className="bi bi-exclamation-circle"></i>
           </div>
 
@@ -64,7 +64,7 @@ export default function NotFound() {
           <div data-aos="fade-up" data-aos-delay="600">
             <Link
               to="/"
-              className="inline-block bg-emerald-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-emerald-700 transition"
+              className="inline-block bg-teal-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-teal-700 transition"
             >
               بازگشت به صفحه اصلی
             </Link>

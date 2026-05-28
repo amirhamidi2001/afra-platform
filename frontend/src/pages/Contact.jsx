@@ -60,12 +60,12 @@ export default function Contact() {
 
   return (
     <main>
-      <div className="bg-emerald-50 py-12 border-b">
+      <div className="bg-teal-50 py-12 border-b">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
           <h1 className="text-3xl font-bold text-gray-800">تماس با ما</h1>
           <nav className="text-sm">
             <ol className="flex gap-2">
-              <li><a href="/" className="text-emerald-600 hover:underline">خانه</a></li>
+              <li><a href="/" className="text-teal-600 hover:underline">خانه</a></li>
               <li className="text-gray-500">/</li>
               <li className="text-gray-600">تماس با ما</li>
             </ol>
@@ -93,8 +93,8 @@ export default function Contact() {
             <div className="w-full lg:w-4/12 px-4 mb-8 lg:mb-0">
               <div className="space-y-6">
                 <div className="flex items-start gap-4" data-aos="fade-up" data-aos-delay="300">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <i className="bi bi-geo-alt text-emerald-600 text-xl"></i>
+                  <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <i className="bi bi-geo-alt text-teal-600 text-xl"></i>
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">آدرس</h3>
@@ -102,8 +102,8 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4" data-aos="fade-up" data-aos-delay="400">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <i className="bi bi-telephone text-emerald-600 text-xl"></i>
+                  <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <i className="bi bi-telephone text-teal-600 text-xl"></i>
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">تماس تلفنی</h3>
@@ -111,8 +111,8 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4" data-aos="fade-up" data-aos-delay="500">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <i className="bi bi-envelope text-emerald-600 text-xl"></i>
+                  <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <i className="bi bi-envelope text-teal-600 text-xl"></i>
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">ایمیل</h3>
@@ -131,7 +131,7 @@ export default function Contact() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className={`w-full border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                      className={`w-full border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-teal-500`}
                       placeholder="نام شما *"
                     />
                     {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
@@ -142,7 +142,7 @@ export default function Contact() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className={`w-full border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                      className={`w-full border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-teal-500`}
                       placeholder="ایمیل شما *"
                     />
                     {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
@@ -153,7 +153,7 @@ export default function Contact() {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      className={`w-full border ${errors.subject ? 'border-red-500' : 'border-gray-300'} rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                      className={`w-full border ${errors.subject ? 'border-red-500' : 'border-gray-300'} rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-teal-500`}
                       placeholder="موضوع *"
                     />
                     {errors.subject && <p className="text-red-500 text-xs mt-1">{errors.subject}</p>}
@@ -164,19 +164,19 @@ export default function Contact() {
                       rows="6"
                       value={formData.message}
                       onChange={handleChange}
-                      className={`w-full border ${errors.message ? 'border-red-500' : 'border-gray-300'} rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                      className={`w-full border ${errors.message ? 'border-red-500' : 'border-gray-300'} rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-teal-500`}
                       placeholder="پیام شما *"
                     ></textarea>
                     {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
                   </div>
                   <div className="w-full px-3 text-center">
                     {loading && (
-                      <div className="text-emerald-600 mb-3">
+                      <div className="text-teal-600 mb-3">
                         <i className="bi bi-arrow-repeat bi-spin"></i> در حال ارسال...
                       </div>
                     )}
                     {status.type === "success" && (
-                      <div className="bg-emerald-100 text-emerald-700 p-2 rounded mb-3">{status.message}</div>
+                      <div className="bg-teal-100 text-teal-700 p-2 rounded mb-3">{status.message}</div>
                     )}
                     {status.type === "error" && (
                       <div className="bg-red-100 text-red-700 p-2 rounded mb-3">{status.message}</div>
@@ -184,7 +184,7 @@ export default function Contact() {
                     <button
                       type="submit"
                       disabled={loading}
-                      className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-full font-semibold transition disabled:opacity-50"
+                      className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-semibold transition disabled:opacity-50"
                     >
                       ارسال پیام
                     </button>

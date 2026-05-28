@@ -12,7 +12,6 @@ import { useAuth } from "../../context/AuthContext";
 const NAV_LINKS = [
   { to: "/", label: "خانه" },
   { to: "/about", label: "درباره ما" },
-  { to: "/courses", label: "دوره ها" },
   { to: "/trainers", label: "مدرسان ما" },
   { to: "/cart", label: "سبد خرید" },
   { to: "/checkout", label: "تسویه حساب" },
@@ -24,7 +23,6 @@ const NAV_LINKS = [
 const MOBILE_NAV_LINKS = [
   { to: "/", label: "خانه" },
   { to: "/about", label: "درباره ما" },
-  { to: "/courses", label: "دوره ها" },
   { to: "/trainers", label: "مدرسان ما" },
   { to: "/cart", label: "سبد خرید" },
   { to: "/checkout", label: "تسویه حساب" },
@@ -69,17 +67,16 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white shadow-md" dir="rtl">
 
       {/* ── Top bar ───────────────────────────────────────────────────────── */}
-      <div className="bg-emerald-50 text-sm py-2 border-b">
+      <div className="bg-teal-50 text-sm py-2 border-b">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-between items-center gap-2">
 
             {/* Phone */}
-            <div className="hidden lg:flex items-center gap-1 text-emerald-600">
-              <i className="bi bi-telephone-fill"></i>
-              <span>نیاز به کمک؟ با ما تماس بگیرید:</span>
-              <a href="tel:+1234567890" className="text-emerald-600 hover:underline">
-                +۱ (۲۳۴) ۵۶۷-۸۹۰
+            <div className="hidden lg:flex items-center gap-1 text-teal-600">
+              <a href="tel:+989123456789" className="text-teal-600 hover:underline">
+                09123456789
               </a>
+              <i className="bi bi-telephone-fill"></i>
             </div>
 
             {/* Promo Swiper */}
@@ -92,39 +89,18 @@ export default function Header() {
                 speed={600}
                 style={{ height: "24px" }}
               >
-                <SwiperSlide><div className="text-emerald-700">🚚 ارسال رایگان برای سفارش‌های بالای ۵۰ دلار</div></SwiperSlide>
-                <SwiperSlide><div className="text-emerald-700">💰 ضمانت بازگشت وجه تا ۳۰ روز</div></SwiperSlide>
-                <SwiperSlide><div className="text-emerald-700">🎁 ۲۰٪ تخفیف برای اولین خرید</div></SwiperSlide>
+                <SwiperSlide><div className="text-teal-700">🚚 ارسال رایگان برای سفارش‌های بالای ۵۰ دلار</div></SwiperSlide>
+                <SwiperSlide><div className="text-teal-700">💰 ضمانت بازگشت وجه تا ۳۰ روز</div></SwiperSlide>
+                <SwiperSlide><div className="text-teal-700">🎁 ۲۰٪ تخفیف برای اولین خرید</div></SwiperSlide>
               </Swiper>
             </div>
 
             {/* Language / Currency */}
             <div className="hidden lg:flex items-center gap-3">
-              {/* Language */}
               <div className="relative group">
-                <button className="flex items-center gap-1 text-emerald-600 hover:text-emerald-700">
-                  <i className="bi bi-translate"></i> فارسی
-                  <i className="bi bi-chevron-down text-xs"></i>
-                </button>
-                <ul className="absolute left-0 top-full mt-1 w-28 bg-white shadow-md rounded-md
-                               opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-20">
-                  <li><a href="#" className="block px-3 py-1 hover:bg-emerald-100">English</a></li>
-                  <li><a href="#" className="block px-3 py-1 hover:bg-emerald-100">Español</a></li>
-                  <li><a href="#" className="block px-3 py-1 hover:bg-emerald-100">Français</a></li>
-                </ul>
-              </div>
-              {/* Currency */}
-              <div className="relative group">
-                <button className="flex items-center gap-1 text-emerald-600 hover:text-emerald-700">
-                  <i className="bi bi-currency-dollar"></i> USD
-                  <i className="bi bi-chevron-down text-xs"></i>
-                </button>
-                <ul className="absolute left-0 top-full mt-1 w-24 bg-white shadow-md rounded-md
-                               opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-20">
-                  <li><a href="#" className="block px-3 py-1 hover:bg-emerald-100">USD</a></li>
-                  <li><a href="#" className="block px-3 py-1 hover:bg-emerald-100">EUR</a></li>
-                  <li><a href="#" className="block px-3 py-1 hover:bg-emerald-100">GBP</a></li>
-                </ul>
+                <Link to="/" className="flex items-center gap-1 text-teal-600 hover:text-teal-700">
+                  پلتفرم آموزشی افرا
+                </Link>
               </div>
             </div>
 
@@ -138,8 +114,9 @@ export default function Header() {
           <div className="flex items-center justify-between gap-4">
 
             {/* Logo */}
-            <Link to="/" className="text-2xl font-bold text-emerald-600 shrink-0">
-              پلتفرم آموزشی افرا
+
+            <Link to="/">
+              <img src="/src/assets/img/logo.webp" alt="درباره ما" className="h-12 object-cover" />
             </Link>
 
             {/* Desktop search */}
@@ -147,13 +124,13 @@ export default function Header() {
               <div className="relative">
                 <input
                   type="text"
-                  placeholder="جستجوی دوره‌ها..."
-                  className="w-full border border-emerald-300 rounded-full py-2 px-4 pl-10
-                             focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  placeholder="جستجو..."
+                  className="w-full border border-teal-300 rounded-full py-2 px-4 pl-10
+                             focus:outline-none focus:ring-2 focus:ring-teal-500"
                 />
                 <button
                   type="submit"
-                  className="absolute left-3 top-1/2 -translate-y-1/2 text-emerald-400 hover:text-emerald-600"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 text-teal-400 hover:text-teal-600"
                 >
                   <i className="bi bi-search"></i>
                 </button>
@@ -166,7 +143,7 @@ export default function Header() {
               {/* Mobile search toggle */}
               <button
                 onClick={() => setMobileSearchOpen((v) => !v)}
-                className="lg:hidden text-2xl text-emerald-700"
+                className="lg:hidden text-2xl text-teal-700"
                 aria-label="جستجو"
               >
                 <i className="bi bi-search"></i>
@@ -176,12 +153,12 @@ export default function Header() {
               <div className="relative" ref={accountRef}>
                 <button
                   onClick={() => setAccountOpen((v) => !v)}
-                  className="text-2xl text-emerald-700 hover:text-emerald-500 transition-colors"
+                  className="text-2xl text-teal-700 hover:text-teal-500 transition-colors"
                   aria-label="حساب کاربری"
                   aria-expanded={accountOpen}
                 >
                   {/* Show filled icon when logged in */}
-                  <i className={`bi ${isAuthenticated ? "bi-person-check-fill text-emerald-600" : "bi-person"}`}></i>
+                  <i className={`bi ${isAuthenticated ? "bi-person-check-fill text-teal-600" : "bi-person"}`}></i>
                 </button>
 
                 {accountOpen && (
@@ -191,9 +168,9 @@ export default function Header() {
                       /* ── Authenticated state ─────────────────────── */
                       <>
                         {/* User info header */}
-                        <div className="px-4 py-3 bg-emerald-50 border-b flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-full bg-emerald-200 flex items-center justify-center shrink-0">
-                            <i className="bi bi-person-fill text-emerald-700 text-lg"></i>
+                        <div className="px-4 py-3 bg-teal-50 border-b flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-full bg-teal-200 flex items-center justify-center shrink-0">
+                            <i className="bi bi-person-fill text-teal-700 text-lg"></i>
                           </div>
                           <div className="min-w-0">
                             <p className="font-semibold text-gray-800 text-sm truncate">
@@ -233,9 +210,9 @@ export default function Header() {
                       <>
                         <div className="p-4 border-b text-center">
                           <h6 className="font-bold">
-                            به <span className="text-emerald-600">پلتفرم افرا</span> خوش آمدید
+                            به <span className="text-teal-600">پلتفرم افرا</span> خوش آمدید
                           </h6>
-                          <p className="text-xs text-emerald-500 mt-0.5">وارد شوید یا ثبت‌نام کنید</p>
+                          <p className="text-xs text-teal-500 mt-0.5">وارد شوید یا ثبت‌نام کنید</p>
                         </div>
 
                         <div className="p-2 space-y-0.5">
@@ -249,7 +226,7 @@ export default function Header() {
                           <Link
                             to="/login"
                             onClick={() => setAccountOpen(false)}
-                            className="block bg-emerald-600 hover:bg-emerald-700 text-white text-center
+                            className="block bg-teal-600 hover:bg-teal-700 text-white text-center
                                        text-sm font-semibold py-2 rounded-lg transition-colors"
                           >
                             ورود
@@ -257,7 +234,7 @@ export default function Header() {
                           <Link
                             to="/register"
                             onClick={() => setAccountOpen(false)}
-                            className="block border border-emerald-600 text-emerald-600 hover:bg-emerald-50
+                            className="block border border-teal-600 text-teal-600 hover:bg-teal-50
                                        text-center text-sm font-semibold py-2 rounded-lg transition-colors"
                           >
                             ثبت‌نام
@@ -273,7 +250,7 @@ export default function Header() {
               {/* Wishlist */}
               <Link
                 to="/account?tab=wishlist"
-                className="hidden md:block text-2xl text-emerald-700 hover:text-emerald-500 relative transition-colors"
+                className="hidden md:block text-2xl text-teal-700 hover:text-teal-500 relative transition-colors"
                 aria-label="علاقه‌مندی‌ها"
               >
                 <i className="bi bi-heart"></i>
@@ -286,7 +263,7 @@ export default function Header() {
               {/* Cart */}
               <Link
                 to="/cart"
-                className="text-2xl text-emerald-700 hover:text-emerald-500 relative transition-colors"
+                className="text-2xl text-teal-700 hover:text-teal-500 relative transition-colors"
                 aria-label="سبد خرید"
               >
                 <i className="bi bi-cart3"></i>
@@ -299,7 +276,7 @@ export default function Header() {
               {/* Hamburger */}
               <button
                 onClick={() => setMobileMenuOpen((v) => !v)}
-                className="lg:hidden text-2xl text-emerald-700"
+                className="lg:hidden text-2xl text-teal-700"
                 aria-label="منو"
               >
                 <i className={`bi ${mobileMenuOpen ? "bi-x" : "bi-list"}`}></i>
@@ -315,12 +292,12 @@ export default function Header() {
                 <input
                   type="text"
                   placeholder="جستجوی دوره‌ها..."
-                  className="w-full border border-emerald-300 rounded-full py-2 px-4 pl-10
-                             focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  className="w-full border border-teal-300 rounded-full py-2 px-4 pl-10
+                             focus:outline-none focus:ring-2 focus:ring-teal-500"
                 />
                 <button
                   type="submit"
-                  className="absolute left-3 top-1/2 -translate-y-1/2 text-emerald-400"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 text-teal-400"
                 >
                   <i className="bi bi-search"></i>
                 </button>
@@ -340,7 +317,7 @@ export default function Header() {
               <li key={to}>
                 <Link
                   to={to}
-                  className="text-emerald-700 hover:text-emerald-500 font-medium transition-colors"
+                  className="text-teal-700 hover:text-teal-500 font-medium transition-colors"
                 >
                   {label}
                 </Link>
@@ -357,7 +334,7 @@ export default function Header() {
                     <Link
                       to={to}
                       onClick={closeMobileMenu}
-                      className="block text-emerald-700 hover:text-emerald-500 transition-colors py-1"
+                      className="block text-teal-700 hover:text-teal-500 transition-colors py-1"
                     >
                       {label}
                     </Link>
@@ -369,7 +346,7 @@ export default function Header() {
                   {isAuthenticated ? (
                     <div className="space-y-2">
                       <div className="flex items-center gap-2 text-sm text-gray-600 px-1 pb-2">
-                        <i className="bi bi-person-check-fill text-emerald-600"></i>
+                        <i className="bi bi-person-check-fill text-teal-600"></i>
                         <span className="font-medium truncate">
                           {user?.first_name
                             ? `${user.first_name} ${user.last_name ?? ""}`.trim()
@@ -379,14 +356,14 @@ export default function Header() {
                       <Link
                         to="/account"
                         onClick={closeMobileMenu}
-                        className="block text-emerald-700 hover:text-emerald-500 transition-colors py-1"
+                        className="block text-teal-700 hover:text-teal-500 transition-colors py-1"
                       >
                         پروفایل من
                       </Link>
                       <Link
                         to="/change-password"
                         onClick={closeMobileMenu}
-                        className="block text-emerald-700 hover:text-emerald-500 transition-colors py-1"
+                        className="block text-teal-700 hover:text-teal-500 transition-colors py-1"
                       >
                         تغییر رمز عبور
                       </Link>
@@ -404,7 +381,7 @@ export default function Header() {
                       <Link
                         to="/login"
                         onClick={closeMobileMenu}
-                        className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white text-center
+                        className="flex-1 bg-teal-600 hover:bg-teal-700 text-white text-center
                                    text-sm font-semibold py-2 rounded-lg transition-colors"
                       >
                         ورود
@@ -412,7 +389,7 @@ export default function Header() {
                       <Link
                         to="/register"
                         onClick={closeMobileMenu}
-                        className="flex-1 border border-emerald-600 text-emerald-600 hover:bg-emerald-50
+                        className="flex-1 border border-teal-600 text-teal-600 hover:bg-teal-50
                                    text-center text-sm font-semibold py-2 rounded-lg transition-colors"
                       >
                         ثبت‌نام
@@ -438,9 +415,9 @@ function DropdownLink({ to, icon, label, onClick }) {
       to={to}
       onClick={onClick}
       className="flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm text-gray-700
-                 hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
+                 hover:bg-teal-50 hover:text-teal-700 transition-colors"
     >
-      <i className={`bi ${icon} text-emerald-500 text-base`}></i>
+      <i className={`bi ${icon} text-teal-500 text-base`}></i>
       <span>{label}</span>
     </Link>
   );

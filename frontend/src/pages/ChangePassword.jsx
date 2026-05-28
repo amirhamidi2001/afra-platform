@@ -63,8 +63,8 @@ export default function ChangePassword() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
         <div className="w-full max-w-sm bg-white rounded-2xl shadow-lg p-8 text-center" dir="rtl">
-          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100">
-            <svg className="h-8 w-8 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-teal-100">
+            <svg className="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
@@ -124,15 +124,15 @@ export default function ChangePassword() {
               type="checkbox"
               checked={showPasswords}
               onChange={() => setShowPasswords((v) => !v)}
-              className="rounded border-gray-300 text-emerald-600 focus:ring-emerald-500"
+              className="rounded border-gray-300 text-teal-600 focus:ring-teal-500"
             />
             نمایش رمزها
           </label>
 
           <button
             type="submit" disabled={isLoading}
-            className="w-full rounded-lg bg-emerald-600 py-2.5 text-sm font-semibold text-white
-                       hover:bg-emerald-700 disabled:opacity-60 disabled:cursor-not-allowed transition"
+            className="w-full rounded-lg bg-teal-600 py-2.5 text-sm font-semibold text-white
+                       hover:bg-teal-700 disabled:opacity-60 disabled:cursor-not-allowed transition"
           >
             {isLoading ? "در حال ذخیره…" : "تغییر رمز عبور"}
           </button>
@@ -151,7 +151,7 @@ function PasswordField({ id, label, value, onChange, show, error, autoComplete, 
         id={id} name={id} type={show ? "text" : "password"}
         value={value} onChange={onChange} autoComplete={autoComplete} placeholder={placeholder}
         className={`w-full rounded-lg border px-4 py-2.5 text-sm transition
-          focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent
+          focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent
           placeholder:text-gray-400
           ${error ? "border-red-400 bg-red-50" : "border-gray-300"}`}
       />

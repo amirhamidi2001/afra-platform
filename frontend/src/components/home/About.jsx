@@ -1,4 +1,4 @@
-import aboutImg from "/src/assets/img/about/about-1.webp";
+import aboutImg from "/src/assets/img/logo.webp";
 
 export default function About() {
   return (
@@ -24,21 +24,21 @@ export default function About() {
           </p>
           <ul className="mt-4 space-y-2">
             <li className="flex items-start gap-2">
-              <i className="bi bi-check-circle text-emerald-500 mt-1"></i>
+              <i className="bi bi-check-circle text-teal-500 mt-1"></i>
               <span>لورم ایپسوم متن ساختگی</span>
             </li>
             <li className="flex items-start gap-2">
-              <i className="bi bi-check-circle text-emerald-500 mt-1"></i>
+              <i className="bi bi-check-circle text-teal-500 mt-1"></i>
               <span>دومین مورد توضیحات</span>
             </li>
             <li className="flex items-start gap-2">
-              <i className="bi bi-check-circle text-emerald-500 mt-1"></i>
+              <i className="bi bi-check-circle text-teal-500 mt-1"></i>
               <span>سومین مورد بلندتر برای تست</span>
             </li>
           </ul>
           <a
             href="#"
-            className="mt-6 inline-flex items-center text-emerald-600 font-semibold hover:gap-2 transition-all"
+            className="mt-6 inline-flex items-center text-teal-600 font-semibold hover:gap-2 transition-all"
           >
             بیشتر بخوانید <i className="bi bi-arrow-left mr-1"></i>
           </a>

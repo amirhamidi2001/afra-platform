@@ -40,13 +40,13 @@ export default function ForgotPassword() {
           </div>
           <h2 className="text-lg font-bold text-gray-900 mb-2">ایمیل ارسال شد</h2>
           <p className="text-sm text-gray-600 mb-2">
-            اگر آدرس <span className="font-medium text-emerald-600">{email}</span> در سیستم ما وجود داشته باشد،
+            اگر آدرس <span className="font-medium text-teal-600">{email}</span> در سیستم ما وجود داشته باشد،
             یک لینک بازنشانی رمز عبور ارسال خواهد شد.
           </p>
           <p className="text-xs text-gray-400 mb-6">لطفاً پوشه اسپم را نیز بررسی کنید.</p>
           <Link
             to="/login"
-            className="inline-block rounded-lg bg-emerald-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-emerald-700 transition"
+            className="inline-block rounded-lg bg-teal-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-teal-700 transition"
           >
             بازگشت به ورود
           </Link>
@@ -85,7 +85,7 @@ export default function ForgotPassword() {
               onChange={(e) => { setEmail(e.target.value); setError(""); }}
               placeholder="example@email.com"
               className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm
-                         focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent
+                         focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent
                          placeholder:text-gray-400 transition"
             />
           </div>
@@ -93,14 +93,14 @@ export default function ForgotPassword() {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full rounded-lg bg-emerald-600 py-2.5 text-sm font-semibold text-white
-                       hover:bg-emerald-700 disabled:opacity-60 disabled:cursor-not-allowed transition"
+            className="w-full rounded-lg bg-teal-600 py-2.5 text-sm font-semibold text-white
+                       hover:bg-teal-700 disabled:opacity-60 disabled:cursor-not-allowed transition"
           >
             {isLoading ? "در حال ارسال…" : "ارسال لینک بازنشانی"}
           </button>
 
           <p className="text-center text-sm text-gray-500">
-            <Link to="/login" className="text-emerald-600 font-medium hover:underline">
+            <Link to="/login" className="text-teal-600 font-medium hover:underline">
               بازگشت به ورود
             </Link>
           </p>

@@ -123,12 +123,12 @@ export default function Cart() {
 
   return (
     <main>
-      <div className="bg-emerald-50 py-12 border-b">
+      <div className="bg-teal-50 py-12 border-b">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
           <h1 className="text-3xl font-bold text-gray-800">سبد خرید</h1>
           <nav className="text-sm">
             <ol className="flex gap-2">
-              <li><a href="/" className="text-emerald-600 hover:underline">خانه</a></li>
+              <li><a href="/" className="text-teal-600 hover:underline">خانه</a></li>
               <li className="text-gray-500">/</li>
               <li className="text-gray-600">سبد خرید</li>
             </ol>
@@ -154,7 +154,7 @@ export default function Cart() {
                   <div className="p-8 text-center text-gray-500">
                     <i className="bi bi-cart-x text-5xl"></i>
                     <p className="mt-2">سبد خرید شما خالی است</p>
-                    <a href="/shop" className="inline-block mt-4 bg-emerald-600 text-white px-4 py-2 rounded-full hover:bg-emerald-700">
+                    <a href="/shop" className="inline-block mt-4 bg-teal-600 text-white px-4 py-2 rounded-full hover:bg-teal-700">
                       شروع خرید
                     </a>
                   </div>
@@ -231,11 +231,11 @@ export default function Cart() {
                           placeholder="کد تخفیف"
                           value={couponCode}
                           onChange={(e) => setCouponCode(e.target.value)}
-                          className="border rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                          className="border rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-teal-500"
                         />
                         <button
                           onClick={applyCoupon}
-                          className="bg-emerald-600 text-white px-4 py-2 rounded-md text-sm hover:bg-emerald-700"
+                          className="bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700"
                         >
                           اعمال کوپن
                         </button>
@@ -315,7 +315,7 @@ export default function Cart() {
                   </div>
 
                   {discount > 0 && (
-                    <div className="flex justify-between text-emerald-600">
+                    <div className="flex justify-between text-teal-600">
                       <span>تخفیف</span>
                       <span>-${discount.toFixed(2)}</span>
                     </div>
@@ -323,20 +323,20 @@ export default function Cart() {
 
                   <div className="border-t pt-3 flex justify-between font-bold text-lg">
                     <span>جمع کل</span>
-                    <span className="text-emerald-700">${finalTotal.toFixed(2)}</span>
+                    <span className="text-teal-700">${finalTotal.toFixed(2)}</span>
                   </div>
                 </div>
 
                 <button
                   onClick={() => alert("تسویه حساب - ادامه به درگاه پرداخت")}
-                  className="w-full bg-emerald-600 text-white py-2 rounded-full mt-6 hover:bg-emerald-700 transition flex justify-center items-center gap-2"
+                  className="w-full bg-teal-600 text-white py-2 rounded-full mt-6 hover:bg-teal-700 transition flex justify-center items-center gap-2"
                 >
                   ادامه به تسویه حساب <i className="bi bi-arrow-left"></i>
                 </button>
 
                 <a
                   href="/"
-                  className="block text-center text-emerald-600 mt-4 hover:underline"
+                  className="block text-center text-teal-600 mt-4 hover:underline"
                 >
                   <i className="bi bi-arrow-right"></i> ادامه خرید
                 </a>

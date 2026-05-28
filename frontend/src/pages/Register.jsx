@@ -62,19 +62,19 @@ export default function Register() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
         <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8 text-center" dir="rtl">
-          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100">
-            <svg className="h-8 w-8 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-teal-100">
+            <svg className="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
           <h2 className="text-xl font-bold text-gray-900 mb-2">ثبت‌نام با موفقیت انجام شد!</h2>
           <p className="text-sm text-gray-600 mb-6">
-            یک ایمیل تأیید به آدرس <span className="font-medium text-emerald-600">{form.email}</span> ارسال شد.
+            یک ایمیل تأیید به آدرس <span className="font-medium text-teal-600">{form.email}</span> ارسال شد.
             لطفاً ایمیل خود را بررسی کرده و روی لینک فعال‌سازی کلیک کنید.
           </p>
           <Link
             to="/login"
-            className="inline-block rounded-lg bg-emerald-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-emerald-700 transition"
+            className="inline-block rounded-lg bg-teal-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-teal-700 transition"
           >
             رفتن به صفحه ورود
           </Link>
@@ -90,7 +90,7 @@ export default function Register() {
           <h1 className="text-2xl font-bold text-gray-900">ایجاد حساب کاربری</h1>
           <p className="mt-1 text-sm text-gray-500">
             قبلاً ثبت‌نام کرده‌اید؟{" "}
-            <Link to="/login" className="text-emerald-600 font-medium hover:underline">
+            <Link to="/login" className="text-teal-600 font-medium hover:underline">
               ورود
             </Link>
           </p>
@@ -126,7 +126,7 @@ export default function Register() {
               value={form.user_type}
               onChange={handleChange}
               className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm
-                         focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-white transition"
+                         focus:outline-none focus:ring-2 focus:ring-teal-500 bg-white transition"
             >
               {USER_TYPE_OPTIONS.map((o) => (
                 <option key={o.value} value={o.value}>{o.label}</option>
@@ -145,7 +145,7 @@ export default function Register() {
                 value={form.password} onChange={handleChange} autoComplete="new-password"
                 placeholder="حداقل ۸ کاراکتر"
                 className={`w-full rounded-lg border px-4 py-2.5 pr-10 text-sm transition
-                  focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent
+                  focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent
                   ${errors.password ? "border-red-400 bg-red-50" : "border-gray-300"}`}
               />
               <button type="button" tabIndex={-1}
@@ -165,8 +165,8 @@ export default function Register() {
 
           <button
             type="submit" disabled={isLoading}
-            className="w-full rounded-lg bg-emerald-600 py-2.5 text-sm font-semibold text-white
-                       hover:bg-emerald-700 disabled:opacity-60 disabled:cursor-not-allowed transition mt-2"
+            className="w-full rounded-lg bg-teal-600 py-2.5 text-sm font-semibold text-white
+                       hover:bg-teal-700 disabled:opacity-60 disabled:cursor-not-allowed transition mt-2"
           >
             {isLoading ? "در حال ثبت‌نام…" : "ایجاد حساب"}
           </button>
@@ -185,7 +185,7 @@ function Field({ label, id, error, ...props }) {
         id={id}
         {...props}
         className={`w-full rounded-lg border px-4 py-2.5 text-sm transition
-          focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent
+          focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent
           placeholder:text-gray-400
           ${error ? "border-red-400 bg-red-50" : "border-gray-300"}`}
       />

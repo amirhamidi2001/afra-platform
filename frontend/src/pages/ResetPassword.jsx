@@ -48,7 +48,7 @@ export default function ResetPassword() {
       <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
         <div className="text-center" dir="rtl">
           <p className="text-red-600 text-sm mb-4">لینک بازنشانی رمز عبور نامعتبر است.</p>
-          <Link to="/forgot-password" className="text-emerald-600 hover:underline text-sm">
+          <Link to="/forgot-password" className="text-teal-600 hover:underline text-sm">
             درخواست لینک جدید
           </Link>
         </div>
@@ -60,8 +60,8 @@ export default function ResetPassword() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
         <div className="w-full max-w-sm bg-white rounded-2xl shadow-lg p-8 text-center" dir="rtl">
-          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100">
-            <svg className="h-8 w-8 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-teal-100">
+            <svg className="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
@@ -99,7 +99,7 @@ export default function ResetPassword() {
                 value={form.new_password} onChange={handleChange}
                 autoComplete="new-password" placeholder="حداقل ۸ کاراکتر"
                 className={`w-full rounded-lg border px-4 py-2.5 pr-10 text-sm transition
-                  focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent
+                  focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent
                   ${errors.new_password ? "border-red-400 bg-red-50" : "border-gray-300"}`}
               />
               <button type="button" tabIndex={-1}
@@ -123,7 +123,7 @@ export default function ResetPassword() {
               value={form.confirm_password} onChange={handleChange}
               autoComplete="new-password" placeholder="تکرار رمز عبور جدید"
               className={`w-full rounded-lg border px-4 py-2.5 text-sm transition
-                focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent
+                focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent
                 ${errors.confirm_password ? "border-red-400 bg-red-50" : "border-gray-300"}`}
             />
             {errors.confirm_password && (
@@ -133,8 +133,8 @@ export default function ResetPassword() {
 
           <button
             type="submit" disabled={isLoading}
-            className="w-full rounded-lg bg-emerald-600 py-2.5 text-sm font-semibold text-white
-                       hover:bg-emerald-700 disabled:opacity-60 disabled:cursor-not-allowed transition"
+            className="w-full rounded-lg bg-teal-600 py-2.5 text-sm font-semibold text-white
+                       hover:bg-teal-700 disabled:opacity-60 disabled:cursor-not-allowed transition"
           >
             {isLoading ? "در حال ذخیره…" : "ذخیره رمز عبور جدید"}
           </button>

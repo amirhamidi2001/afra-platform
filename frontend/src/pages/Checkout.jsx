@@ -117,12 +117,12 @@ export default function Checkout() {
 
   return (
     <main>
-      <div className="bg-emerald-50 py-12 border-b">
+      <div className="bg-teal-50 py-12 border-b">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
           <h1 className="text-3xl font-bold text-gray-800">تسویه حساب</h1>
           <nav className="text-sm">
             <ol className="flex gap-2">
-              <li><a href="/" className="text-emerald-600 hover:underline">خانه</a></li>
+              <li><a href="/" className="text-teal-600 hover:underline">خانه</a></li>
               <li className="text-gray-500">/</li>
               <li className="text-gray-600">تسویه حساب</li>
             </ol>
@@ -137,7 +137,7 @@ export default function Checkout() {
               <div className="space-y-6">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden border">
                   <div className="bg-gray-50 px-6 py-4 border-b flex items-center gap-3">
-                    <span className="w-8 h-8 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold">1</span>
+                    <span className="w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold">1</span>
                     <h3 className="text-lg font-semibold">اطلاعات مشتری</h3>
                   </div>
                   <div className="p-6">
@@ -149,7 +149,7 @@ export default function Checkout() {
                           name="firstName"
                           value={formData.firstName}
                           onChange={handleChange}
-                          className={`w-full border ${errors.firstName ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                          className={`w-full border ${errors.firstName ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500`}
                           placeholder="نام"
                         />
                         {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
@@ -161,7 +161,7 @@ export default function Checkout() {
                           name="lastName"
                           value={formData.lastName}
                           onChange={handleChange}
-                          className={`w-full border ${errors.lastName ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                          className={`w-full border ${errors.lastName ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500`}
                           placeholder="نام خانوادگی"
                         />
                         {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>}
@@ -174,7 +174,7 @@ export default function Checkout() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className={`w-full border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                        className={`w-full border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500`}
                         placeholder="ایمیل شما"
                       />
                       {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
@@ -186,7 +186,7 @@ export default function Checkout() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className={`w-full border ${errors.phone ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                        className={`w-full border ${errors.phone ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500`}
                         placeholder="تلفن همراه"
                       />
                       {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
@@ -196,7 +196,7 @@ export default function Checkout() {
 
                 <div className="bg-white rounded-lg shadow-md overflow-hidden border">
                   <div className="bg-gray-50 px-6 py-4 border-b flex items-center gap-3">
-                    <span className="w-8 h-8 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold">2</span>
+                    <span className="w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold">2</span>
                     <h3 className="text-lg font-semibold">آدرس حمل و نقل</h3>
                   </div>
                   <div className="p-6">
@@ -207,7 +207,7 @@ export default function Checkout() {
                         name="address"
                         value={formData.address}
                         onChange={handleChange}
-                        className={`w-full border ${errors.address ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                        className={`w-full border ${errors.address ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500`}
                         placeholder="خیابان، پلاک"
                       />
                       {errors.address && <p className="text-red-500 text-xs mt-1">{errors.address}</p>}
@@ -219,7 +219,7 @@ export default function Checkout() {
                         name="apartment"
                         value={formData.apartment}
                         onChange={handleChange}
-                        className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                        className="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
                         placeholder="واحد، طبقه"
                       />
                     </div>
@@ -231,7 +231,7 @@ export default function Checkout() {
                           name="city"
                           value={formData.city}
                           onChange={handleChange}
-                          className={`w-full border ${errors.city ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                          className={`w-full border ${errors.city ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500`}
                           placeholder="شهر"
                         />
                         {errors.city && <p className="text-red-500 text-xs mt-1">{errors.city}</p>}
@@ -243,7 +243,7 @@ export default function Checkout() {
                           name="state"
                           value={formData.state}
                           onChange={handleChange}
-                          className={`w-full border ${errors.state ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                          className={`w-full border ${errors.state ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500`}
                           placeholder="استان"
                         />
                         {errors.state && <p className="text-red-500 text-xs mt-1">{errors.state}</p>}
@@ -255,7 +255,7 @@ export default function Checkout() {
                           name="zip"
                           value={formData.zip}
                           onChange={handleChange}
-                          className={`w-full border ${errors.zip ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                          className={`w-full border ${errors.zip ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500`}
                           placeholder="کد پستی"
                         />
                         {errors.zip && <p className="text-red-500 text-xs mt-1">{errors.zip}</p>}
@@ -267,7 +267,7 @@ export default function Checkout() {
                         name="country"
                         value={formData.country}
                         onChange={handleChange}
-                        className={`w-full border ${errors.country ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                        className={`w-full border ${errors.country ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500`}
                       >
                         <option value="">کشور را انتخاب کنید</option>
                         <option value="IR">ایران</option>
@@ -304,7 +304,7 @@ export default function Checkout() {
 
                 <div className="bg-white rounded-lg shadow-md overflow-hidden border">
                   <div className="bg-gray-50 px-6 py-4 border-b flex items-center gap-3">
-                    <span className="w-8 h-8 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold">3</span>
+                    <span className="w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold">3</span>
                     <h3 className="text-lg font-semibold">روش پرداخت</h3>
                   </div>
                   <div className="p-6">
@@ -314,7 +314,7 @@ export default function Checkout() {
                         onClick={() => handlePaymentMethodChange("credit-card")}
                         className={`flex-1 min-w-[120px] p-3 border-2 rounded-lg text-center transition ${
                           formData.paymentMethod === "credit-card"
-                            ? "border-emerald-600 bg-emerald-50 text-emerald-700"
+                            ? "border-teal-600 bg-teal-50 text-teal-700"
                             : "border-gray-200 hover:border-gray-300"
                         }`}
                       >
@@ -326,7 +326,7 @@ export default function Checkout() {
                         onClick={() => handlePaymentMethodChange("paypal")}
                         className={`flex-1 min-w-[120px] p-3 border-2 rounded-lg text-center transition ${
                           formData.paymentMethod === "paypal"
-                            ? "border-emerald-600 bg-emerald-50 text-emerald-700"
+                            ? "border-teal-600 bg-teal-50 text-teal-700"
                             : "border-gray-200 hover:border-gray-300"
                         }`}
                       >
@@ -338,7 +338,7 @@ export default function Checkout() {
                         onClick={() => handlePaymentMethodChange("apple-pay")}
                         className={`flex-1 min-w-[120px] p-3 border-2 rounded-lg text-center transition ${
                           formData.paymentMethod === "apple-pay"
-                            ? "border-emerald-600 bg-emerald-50 text-emerald-700"
+                            ? "border-teal-600 bg-teal-50 text-teal-700"
                             : "border-gray-200 hover:border-gray-300"
                         }`}
                       >
@@ -356,7 +356,7 @@ export default function Checkout() {
                             name="cardNumber"
                             value={formData.cardNumber}
                             onChange={handleChange}
-                            className={`w-full border ${errors.cardNumber ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                            className={`w-full border ${errors.cardNumber ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500`}
                             placeholder="۱۲۳۴ ۵۶۷۸ ۹۰۱۲ ۳۴۵۶"
                           />
                           {errors.cardNumber && <p className="text-red-500 text-xs mt-1">{errors.cardNumber}</p>}
@@ -369,7 +369,7 @@ export default function Checkout() {
                               name="expiry"
                               value={formData.expiry}
                               onChange={handleChange}
-                              className={`w-full border ${errors.expiry ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                              className={`w-full border ${errors.expiry ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500`}
                               placeholder="MM/YY"
                             />
                             {errors.expiry && <p className="text-red-500 text-xs mt-1">{errors.expiry}</p>}
@@ -381,7 +381,7 @@ export default function Checkout() {
                               name="cvv"
                               value={formData.cvv}
                               onChange={handleChange}
-                              className={`w-full border ${errors.cvv ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                              className={`w-full border ${errors.cvv ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500`}
                               placeholder="۱۲۳"
                             />
                             {errors.cvv && <p className="text-red-500 text-xs mt-1">{errors.cvv}</p>}
@@ -394,7 +394,7 @@ export default function Checkout() {
                             name="cardName"
                             value={formData.cardName}
                             onChange={handleChange}
-                            className={`w-full border ${errors.cardName ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-emerald-500`}
+                            className={`w-full border ${errors.cardName ? 'border-red-500' : 'border-gray-300'} rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-teal-500`}
                             placeholder="John Doe"
                           />
                           {errors.cardName && <p className="text-red-500 text-xs mt-1">{errors.cardName}</p>}
@@ -412,7 +412,7 @@ export default function Checkout() {
 
                 <div className="bg-white rounded-lg shadow-md overflow-hidden border">
                   <div className="bg-gray-50 px-6 py-4 border-b flex items-center gap-3">
-                    <span className="w-8 h-8 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold">4</span>
+                    <span className="w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold">4</span>
                     <h3 className="text-lg font-semibold">مرور و ثبت سفارش</h3>
                   </div>
                   <div className="p-6">
@@ -425,15 +425,15 @@ export default function Checkout() {
                         className="w-4 h-4 mt-1"
                       />
                       <span className="text-sm">
-                        من <a href="#" className="text-emerald-600 hover:underline">قوانین و مقررات</a> و{" "}
-                        <a href="#" className="text-emerald-600 hover:underline">سیاست حریم خصوصی</a> را می‌پذیرم.
+                        من <a href="#" className="text-teal-600 hover:underline">قوانین و مقررات</a> و{" "}
+                        <a href="#" className="text-teal-600 hover:underline">سیاست حریم خصوصی</a> را می‌پذیرم.
                       </span>
                     </label>
                     {errors.terms && <p className="text-red-500 text-xs mb-4">{errors.terms}</p>}
 
                     <button
                       onClick={handleSubmit}
-                      className="w-full bg-emerald-600 text-white py-3 rounded-full font-semibold text-lg hover:bg-emerald-700 transition flex items-center justify-between px-6"
+                      className="w-full bg-teal-600 text-white py-3 rounded-full font-semibold text-lg hover:bg-teal-700 transition flex items-center justify-between px-6"
                     >
                       <span>ثبت سفارش</span>
                       <span className="bg-white/20 px-3 py-1 rounded-full">${total.toFixed(2)}</span>
@@ -476,7 +476,7 @@ export default function Checkout() {
                     placeholder="کد تخفیف"
                     value={promoCode}
                     onChange={(e) => setPromoCode(e.target.value)}
-                    className="flex-1 border border-gray-300 rounded-lg p-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="flex-1 border border-gray-300 rounded-lg p-2 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
                   />
                   <button
                     onClick={applyPromo}
@@ -500,14 +500,14 @@ export default function Checkout() {
                     <span>${tax.toFixed(2)}</span>
                   </div>
                   {discount > 0 && (
-                    <div className="flex justify-between text-emerald-600">
+                    <div className="flex justify-between text-teal-600">
                       <span>تخفیف</span>
                       <span>-${discount.toFixed(2)}</span>
                     </div>
                   )}
                   <div className="flex justify-between font-bold text-lg pt-2 border-t">
                     <span>جمع کل</span>
-                    <span className="text-emerald-700">${total.toFixed(2)}</span>
+                    <span className="text-teal-700">${total.toFixed(2)}</span>
                   </div>
                 </div>
 

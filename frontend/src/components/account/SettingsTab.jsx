@@ -48,7 +48,7 @@ export default function SettingsTab() {
               <input type="tel" value={personalInfo.phone} onChange={(e) => setPersonalInfo({...personalInfo, phone: e.target.value})} className="w-full border rounded-lg p-2" />
             </div>
           </div>
-          <button type="submit" className="bg-emerald-600 text-white px-5 py-2 rounded-lg hover:bg-emerald-700">ذخیره تغییرات</button>
+          <button type="submit" className="bg-teal-600 text-white px-5 py-2 rounded-lg hover:bg-teal-700">ذخیره تغییرات</button>
         </form>
       </div>
 
@@ -59,21 +59,21 @@ export default function SettingsTab() {
             <div><h4 className="font-medium">به‌روزرسانی سفارش</h4><p className="text-sm text-gray-500">دریافت اطلاعیه درباره وضعیت سفارش</p></div>
             <label className="relative inline-flex items-center cursor-pointer">
               <input type="checkbox" className="sr-only peer" checked={preferences.orderUpdates} onChange={() => setPreferences({...preferences, orderUpdates: !preferences.orderUpdates})} />
-              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:bg-emerald-600 after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-[-100%]"></div>
+              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:bg-teal-600 after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-[-100%]"></div>
             </label>
           </div>
           <div className="flex justify-between items-center">
             <div><h4 className="font-medium">تخفیف‌ها و پیشنهادات</h4><p className="text-sm text-gray-500">دریافت ایمیل درباره تخفیف‌ها</p></div>
             <label className="relative inline-flex items-center cursor-pointer">
               <input type="checkbox" className="sr-only peer" checked={preferences.promotions} onChange={() => setPreferences({...preferences, promotions: !preferences.promotions})} />
-              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:bg-emerald-600 after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-[-100%]"></div>
+              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:bg-teal-600 after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-[-100%]"></div>
             </label>
           </div>
           <div className="flex justify-between items-center">
             <div><h4 className="font-medium">خبرنامه</h4><p className="text-sm text-gray-500">عضو خبرنامه هفتگی</p></div>
             <label className="relative inline-flex items-center cursor-pointer">
               <input type="checkbox" className="sr-only peer" checked={preferences.newsletter} onChange={() => setPreferences({...preferences, newsletter: !preferences.newsletter})} />
-              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:bg-emerald-600 after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-[-100%]"></div>
+              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:bg-teal-600 after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-[-100%]"></div>
             </label>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function SettingsTab() {
               <input type="password" value={password.confirm} onChange={(e) => setPassword({...password, confirm: e.target.value})} className="w-full border rounded-lg p-2" required />
             </div>
           </div>
-          <button type="submit" className="bg-emerald-600 text-white px-5 py-2 rounded-lg hover:bg-emerald-700">به‌روزرسانی رمز عبور</button>
+          <button type="submit" className="bg-teal-600 text-white px-5 py-2 rounded-lg hover:bg-teal-700">به‌روزرسانی رمز عبور</button>
         </form>
       </div>
 
@@ -107,7 +107,7 @@ export default function SettingsTab() {
       </div>
 
       {status.message && (
-        <div className={`mt-4 p-3 rounded-lg text-center ${status.type === 'success' ? 'bg-emerald-100 text-emerald-700' : 'bg-red-100 text-red-700'}`}>
+        <div className={`mt-4 p-3 rounded-lg text-center ${status.type === 'success' ? 'bg-teal-100 text-teal-700' : 'bg-red-100 text-red-700'}`}>
           {status.message}
         </div>
       )}

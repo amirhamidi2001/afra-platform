@@ -17,12 +17,12 @@ export default function ProfileSidebar({ activeTab, setActiveTab }) {
             alt="پروفایل"
             className="w-full h-full rounded-full object-cover border-4 border-white shadow"
           />
-          <span className="absolute bottom-0 right-0 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center border-2 border-white">
+          <span className="absolute bottom-0 right-0 w-8 h-8 bg-teal-500 rounded-full flex items-center justify-center border-2 border-white">
             <i className="bi bi-shield-check text-white text-sm"></i>
           </span>
         </div>
         <h4 className="font-bold text-lg">سارا اندرسون</h4>
-        <div className="inline-flex items-center gap-1 bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs mt-2">
+        <div className="inline-flex items-center gap-1 bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-xs mt-2">
           <i className="bi bi-award"></i>
           <span>کاربر ویژه</span>
         </div>
@@ -36,7 +36,7 @@ export default function ProfileSidebar({ activeTab, setActiveTab }) {
                 onClick={() => setActiveTab(item.id)}
                 className={`w-full flex items-center justify-between p-3 rounded-lg transition ${
                   activeTab === item.id
-                    ? "bg-emerald-50 text-emerald-700"
+                    ? "bg-teal-50 text-teal-700"
                     : "text-gray-700 hover:bg-gray-100"
                 }`}
               >
@@ -45,7 +45,7 @@ export default function ProfileSidebar({ activeTab, setActiveTab }) {
                   <span>{item.label}</span>
                 </div>
                 {item.badge && (
-                  <span className="bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded-full">
+                  <span className="bg-teal-100 text-teal-700 text-xs px-2 py-0.5 rounded-full">
                     {item.badge}
                   </span>
                 )}

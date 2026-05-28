@@ -34,15 +34,15 @@ export default function VerifyEmail() {
 
         {status === STATUS.LOADING && (
           <>
-            <div className="mx-auto mb-4 h-12 w-12 animate-spin rounded-full border-4 border-emerald-200 border-t-emerald-600" />
+            <div className="mx-auto mb-4 h-12 w-12 animate-spin rounded-full border-4 border-teal-200 border-t-teal-600" />
             <p className="text-sm text-gray-600">در حال تأیید ایمیل…</p>
           </>
         )}
 
         {status === STATUS.SUCCESS && (
           <>
-            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100">
-              <svg className="h-8 w-8 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-teal-100">
+              <svg className="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
@@ -50,7 +50,7 @@ export default function VerifyEmail() {
             <p className="text-sm text-gray-600 mb-6">{message}</p>
             <Link
               to="/login"
-              className="inline-block rounded-lg bg-emerald-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-emerald-700 transition"
+              className="inline-block rounded-lg bg-teal-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-teal-700 transition"
             >
               ورود به حساب
             </Link>
@@ -68,7 +68,7 @@ export default function VerifyEmail() {
             <p className="text-sm text-gray-600 mb-6">{message}</p>
             <Link
               to="/resend-verification"
-              className="inline-block rounded-lg bg-emerald-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-emerald-700 transition"
+              className="inline-block rounded-lg bg-teal-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-teal-700 transition"
             >
               ارسال مجدد ایمیل تأیید
             </Link>

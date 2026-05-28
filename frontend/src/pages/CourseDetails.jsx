@@ -102,14 +102,14 @@ export default function CourseDetails() {
 
   return (
     <main>
-      <div className="bg-emerald-50 py-12 border-b">
+      <div className="bg-teal-50 py-12 border-b">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
           <h1 className="text-3xl font-bold text-gray-800">جزئیات دوره</h1>
           <nav className="text-sm">
             <ol className="flex gap-2">
-              <li><a href="/" className="text-emerald-600 hover:underline">خانه</a></li>
+              <li><a href="/" className="text-teal-600 hover:underline">خانه</a></li>
               <li className="text-gray-500">/</li>
-              <li><a href="/blog" className="text-emerald-600 hover:underline">دوره ها</a></li>
+              <li><a href="/blog" className="text-teal-600 hover:underline">دوره ها</a></li>
               <li className="text-gray-500">/</li>
               <li className="text-gray-600">جزئیات دوره</li>
             </ol>
@@ -161,16 +161,16 @@ export default function CourseDetails() {
                 <h3 className="text-xl font-bold mb-4">آنچه یاد خواهید گرفت</h3>
                 <div className="grid md:grid-cols-2 gap-3">
                   <ul className="space-y-2">
-                    <li className="flex items-center gap-2"><i className="bi bi-check-circle text-emerald-600"></i> مبانی جاوااسکریپت مدرن و ES6+</li>
-                    <li className="flex items-center gap-2"><i className="bi bi-check-circle text-emerald-600"></i> توسعه مبتنی بر کامپوننت React.js</li>
-                    <li className="flex items-center gap-2"><i className="bi bi-check-circle text-emerald-600"></i> مبانی بک‌اند با Node.js</li>
-                    <li className="flex items-center gap-2"><i className="bi bi-check-circle text-emerald-600"></i> طراحی پایگاه داده و یکپارچه‌سازی MongoDB</li>
+                    <li className="flex items-center gap-2"><i className="bi bi-check-circle text-teal-600"></i> مبانی جاوااسکریپت مدرن و ES6+</li>
+                    <li className="flex items-center gap-2"><i className="bi bi-check-circle text-teal-600"></i> توسعه مبتنی بر کامپوننت React.js</li>
+                    <li className="flex items-center gap-2"><i className="bi bi-check-circle text-teal-600"></i> مبانی بک‌اند با Node.js</li>
+                    <li className="flex items-center gap-2"><i className="bi bi-check-circle text-teal-600"></i> طراحی پایگاه داده و یکپارچه‌سازی MongoDB</li>
                   </ul>
                   <ul className="space-y-2">
-                    <li className="flex items-center gap-2"><i className="bi bi-check-circle text-emerald-600"></i> توسعه و تست RESTful API</li>
-                    <li className="flex items-center gap-2"><i className="bi bi-check-circle text-emerald-600"></i> امنیت و احراز هویت</li>
-                    <li className="flex items-center gap-2"><i className="bi bi-check-circle text-emerald-600"></i> استراتژی‌های استقرار و مبانی DevOps</li>
-                    <li className="flex items-center gap-2"><i className="bi bi-check-circle text-emerald-600"></i> کنترل نسخه با Git و همکاری تیمی</li>
+                    <li className="flex items-center gap-2"><i className="bi bi-check-circle text-teal-600"></i> توسعه و تست RESTful API</li>
+                    <li className="flex items-center gap-2"><i className="bi bi-check-circle text-teal-600"></i> امنیت و احراز هویت</li>
+                    <li className="flex items-center gap-2"><i className="bi bi-check-circle text-teal-600"></i> استراتژی‌های استقرار و مبانی DevOps</li>
+                    <li className="flex items-center gap-2"><i className="bi bi-check-circle text-teal-600"></i> کنترل نسخه با Git و همکاری تیمی</li>
                   </ul>
                 </div>
               </div>
@@ -185,7 +185,7 @@ export default function CourseDetails() {
                         className="w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition text-right"
                       >
                         <div className="flex items-center gap-2">
-                          <i className={`bi ${openModules[module.id] ? 'bi-chevron-up' : 'bi-chevron-down'} text-emerald-600`}></i>
+                          <i className={`bi ${openModules[module.id] ? 'bi-chevron-up' : 'bi-chevron-down'} text-teal-600`}></i>
                           <span className="font-semibold">{module.title}</span>
                         </div>
                         <span className="text-sm text-gray-500">{module.lessonsCount}</span>
@@ -199,7 +199,7 @@ export default function CourseDetails() {
                                     lesson.type === 'text' ? 'bi-file-text' :
                                       lesson.type === 'project' ? 'bi-code-square' :
                                         'bi-question-circle'
-                                  } text-emerald-600`}></i>
+                                  } text-teal-600`}></i>
                                 <span>{lesson.title}</span>
                               </div>
                               <span className="text-sm text-gray-500">{lesson.duration}</span>
@@ -217,7 +217,7 @@ export default function CourseDetails() {
               <div className="sticky top-24 space-y-6" data-aos="fade-left" data-aos-delay="200">
                 <div className="bg-gray-50 rounded-lg p-6 text-center border">
                   <div className="mb-3">
-                    <span className="text-3xl font-bold text-emerald-600">$۱۹۹</span>
+                    <span className="text-3xl font-bold text-teal-600">$۱۹۹</span>
                     <span className="text-gray-500"> / دوره</span>
                     <div className="text-gray-400 line-through text-sm">$۲۹۹</div>
                   </div>
@@ -227,8 +227,8 @@ export default function CourseDetails() {
                     <div className="flex justify-between"><span>دسترسی موبایل و دسکتاپ</span><i className="bi bi-phone"></i></div>
                     <div className="flex justify-between"><span>دسترسی مادام‌العمر</span><i className="bi bi-infinity"></i></div>
                   </div>
-                  <button className="w-full bg-emerald-600 text-white py-2 rounded-full mt-4 hover:bg-emerald-700 transition">ثبت‌نام در دوره</button>
-                  <button className="w-full border border-emerald-600 text-emerald-600 py-2 rounded-full mt-2 hover:bg-emerald-50 transition">پیش‌نمایش دوره</button>
+                  <button className="w-full bg-teal-600 text-white py-2 rounded-full mt-4 hover:bg-teal-700 transition">ثبت‌نام در دوره</button>
+                  <button className="w-full border border-teal-600 text-teal-600 py-2 rounded-full mt-2 hover:bg-teal-50 transition">پیش‌نمایش دوره</button>
                 </div>
 
                 <div className="bg-gray-50 rounded-lg p-6">
@@ -245,12 +245,12 @@ export default function CourseDetails() {
                 <div className="bg-gray-50 rounded-lg p-6">
                   <h4 className="font-bold border-b pb-2 mb-3">برچسب‌ها</h4>
                   <div className="flex flex-wrap gap-2">
-                    <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm">توسعه وب</span>
-                    <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm">جاوااسکریپت</span>
-                    <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm">React</span>
-                    <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm">Node.js</span>
-                    <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm">فول استک</span>
-                    <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm">برنامه‌نویسی</span>
+                    <span className="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm">توسعه وب</span>
+                    <span className="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm">جاوااسکریپت</span>
+                    <span className="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm">React</span>
+                    <span className="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm">Node.js</span>
+                    <span className="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm">فول استک</span>
+                    <span className="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm">برنامه‌نویسی</span>
                   </div>
                 </div>
               </div>
@@ -269,8 +269,8 @@ export default function CourseDetails() {
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
                     className={`px-4 py-2 text-right rounded-lg transition whitespace-nowrap lg:whitespace-normal ${activeTab === tab.id
-                        ? "bg-emerald-600 text-white"
-                        : "bg-white text-gray-700 hover:bg-emerald-100"
+                        ? "bg-teal-600 text-white"
+                        : "bg-white text-gray-700 hover:bg-teal-100"
                       }`}
                   >
                     {tab.title}

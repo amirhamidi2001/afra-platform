@@ -69,12 +69,12 @@ export default function About() {
 
   return (
     <main>
-      <div className="bg-emerald-50 py-12 border-b">
+      <div className="bg-teal-50 py-12 border-b">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
           <h1 className="text-3xl font-bold text-gray-800">درباره ما</h1>
           <nav className="text-sm">
             <ol className="flex gap-2">
-              <li><a href="/" className="text-emerald-600 hover:underline">خانه</a></li>
+              <li><a href="/" className="text-teal-600 hover:underline">خانه</a></li>
               <li className="text-gray-500">/</li>
               <li className="text-gray-600">درباره ما</li>
             </ol>
@@ -109,15 +109,15 @@ export default function About() {
               </p>
               <ul className="mt-4 space-y-2">
                 <li className="flex items-start gap-2">
-                  <i className="bi bi-check-circle text-emerald-500 mt-1"></i>
+                  <i className="bi bi-check-circle text-teal-500 mt-1"></i>
                   <span>لورم ایپسوم متن ساختگی</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <i className="bi bi-check-circle text-emerald-500 mt-1"></i>
+                  <i className="bi bi-check-circle text-teal-500 mt-1"></i>
                   <span>دومین مورد توضیحات</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <i className="bi bi-check-circle text-emerald-500 mt-1"></i>
+                  <i className="bi bi-check-circle text-teal-500 mt-1"></i>
                   <span>سومین مورد بلندتر برای تست</span>
                 </li>
               </ul>
@@ -134,19 +134,19 @@ export default function About() {
             data-aos-delay="100"
           >
             <div className="bg-white p-4 rounded shadow-sm">
-              <span className="text-3xl md:text-4xl font-bold text-emerald-600">1232</span>
+              <span className="text-3xl md:text-4xl font-bold text-teal-600">1232</span>
               <p className="text-gray-600">دانشجو</p>
             </div>
             <div className="bg-white p-4 rounded shadow-sm">
-              <span className="text-3xl md:text-4xl font-bold text-emerald-600">64</span>
+              <span className="text-3xl md:text-4xl font-bold text-teal-600">64</span>
               <p className="text-gray-600">دوره</p>
             </div>
             <div className="bg-white p-4 rounded shadow-sm">
-              <span className="text-3xl md:text-4xl font-bold text-emerald-600">42</span>
+              <span className="text-3xl md:text-4xl font-bold text-teal-600">42</span>
               <p className="text-gray-600">رویداد</p>
             </div>
             <div className="bg-white p-4 rounded shadow-sm">
-              <span className="text-3xl md:text-4xl font-bold text-emerald-600">24</span>
+              <span className="text-3xl md:text-4xl font-bold text-teal-600">24</span>
               <p className="text-gray-600">مدرس</p>
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function About() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12" data-aos="fade-up">
-            <h2 className="text-emerald-600 font-semibold tracking-wide text-sm">نظرات</h2>
+            <h2 className="text-teal-600 font-semibold tracking-wide text-sm">نظرات</h2>
             <p className="text-3xl md:text-4xl font-bold text-gray-800">دانشجویان چه می‌گویند؟</p>
           </div>
 
@@ -175,7 +175,7 @@ export default function About() {
                       <img
                         src={`/src/assets/img/person/${item.img}`}
                         alt={item.name}
-                        className="w-16 h-16 rounded-full object-cover border-2 border-emerald-100"
+                        className="w-16 h-16 rounded-full object-cover border-2 border-teal-100"
                       />
                       <div>
                         <h3 className="font-bold text-lg">{item.name}</h3>
@@ -188,9 +188,9 @@ export default function About() {
                       ))}
                     </div>
                     <p className="text-gray-600 italic leading-relaxed flex-1">
-                      <i className="bi bi-quote text-emerald-300 ml-1"></i>
+                      <i className="bi bi-quote text-teal-300 ml-1"></i>
                       {item.text}
-                      <i className="bi bi-quote text-emerald-300 mr-1"></i>
+                      <i className="bi bi-quote text-teal-300 mr-1"></i>
                     </p>
                   </div>
                 </div>

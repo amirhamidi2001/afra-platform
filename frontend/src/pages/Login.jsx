@@ -64,7 +64,7 @@ export default function Login() {
           <h1 className="text-2xl font-bold text-gray-900">ورود به حساب کاربری</h1>
           <p className="mt-1 text-sm text-gray-500">
             حساب ندارید؟{" "}
-            <Link to="/register" className="text-emerald-600 font-medium hover:underline">
+            <Link to="/register" className="text-teal-600 font-medium hover:underline">
               ثبت‌نام کنید
             </Link>
           </p>
@@ -93,7 +93,7 @@ export default function Login() {
               onChange={handleChange}
               placeholder="example@email.com"
               className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm
-                         focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent
+                         focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent
                          placeholder:text-gray-400 transition"
             />
           </div>
@@ -105,7 +105,7 @@ export default function Login() {
               </label>
               <Link
                 to="/forgot-password"
-                className="text-xs text-emerald-600 hover:underline"
+                className="text-xs text-teal-600 hover:underline"
               >
                 رمز عبور را فراموش کردم
               </Link>
@@ -121,7 +121,7 @@ export default function Login() {
                 onChange={handleChange}
                 placeholder="رمز عبور"
                 className="w-full rounded-lg border border-gray-300 px-4 py-2.5 pr-10 text-sm
-                           focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent
+                           focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent
                            placeholder:text-gray-400 transition"
               />
               <button
@@ -138,8 +138,8 @@ export default function Login() {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full rounded-lg bg-emerald-600 py-2.5 text-sm font-semibold text-white
-                       hover:bg-emerald-700 disabled:opacity-60 disabled:cursor-not-allowed transition"
+            className="w-full rounded-lg bg-teal-600 py-2.5 text-sm font-semibold text-white
+                       hover:bg-teal-700 disabled:opacity-60 disabled:cursor-not-allowed transition"
           >
             {isLoading ? "در حال ورود…" : "ورود"}
           </button>

@@ -9,7 +9,7 @@ export default function WishlistTab() {
     <div>
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold">علاقه‌مندی‌ها</h2>
-        <button className="bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-emerald-700">افزودن همه به سبد</button>
+        <button className="bg-teal-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-teal-700">افزودن همه به سبد</button>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -32,11 +32,11 @@ export default function WishlistTab() {
                 <span className="text-gray-500 text-xs">({item.rating})</span>
               </div>
               <div className="mt-2">
-                <span className="font-bold text-emerald-700">${item.price.toFixed(2)}</span>
+                <span className="font-bold text-teal-700">${item.price.toFixed(2)}</span>
                 {item.originalPrice && <span className="text-gray-400 line-through text-sm mr-2">${item.originalPrice.toFixed(2)}</span>}
               </div>
               {!item.outOfStock ? (
-                <button className="mt-3 w-full bg-emerald-600 text-white py-2 rounded-lg text-sm hover:bg-emerald-700">افزودن به سبد</button>
+                <button className="mt-3 w-full bg-teal-600 text-white py-2 rounded-lg text-sm hover:bg-teal-700">افزودن به سبد</button>
               ) : (
                 <button className="mt-3 w-full bg-gray-200 text-gray-600 py-2 rounded-lg text-sm cursor-not-allowed">اطلاع رسانی در زمان موجودی</button>
               )}

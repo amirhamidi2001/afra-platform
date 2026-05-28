@@ -54,12 +54,12 @@ export default function Trainers() {
 
   return (
     <main>
-      <div className="bg-emerald-50 py-12 border-b">
+      <div className="bg-teal-50 py-12 border-b">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
           <h1 className="text-3xl font-bold text-gray-800">مدرسان ما</h1>
           <nav className="text-sm">
             <ol className="flex gap-2">
-              <li><a href="/" className="text-emerald-600 hover:underline">خانه</a></li>
+              <li><a href="/" className="text-teal-600 hover:underline">خانه</a></li>
               <li className="text-gray-500">/</li>
               <li className="text-gray-600">مدرسان ما</li>
             </ol>
@@ -84,23 +84,23 @@ export default function Trainers() {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-black/60 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <a href="#" className="text-white hover:text-emerald-400 transition text-xl">
+                    <a href="#" className="text-white hover:text-teal-400 transition text-xl">
                       <i className="bi bi-twitter-x"></i>
                     </a>
-                    <a href="#" className="text-white hover:text-emerald-400 transition text-xl">
+                    <a href="#" className="text-white hover:text-teal-400 transition text-xl">
                       <i className="bi bi-facebook"></i>
                     </a>
-                    <a href="#" className="text-white hover:text-emerald-400 transition text-xl">
+                    <a href="#" className="text-white hover:text-teal-400 transition text-xl">
                       <i className="bi bi-instagram"></i>
                     </a>
-                    <a href="#" className="text-white hover:text-emerald-400 transition text-xl">
+                    <a href="#" className="text-white hover:text-teal-400 transition text-xl">
                       <i className="bi bi-linkedin"></i>
                     </a>
                   </div>
                 </div>
                 <div className="p-5">
                   <h4 className="text-xl font-bold text-gray-800">{trainer.name}</h4>
-                  <span className="text-emerald-600 text-sm block mt-1">{trainer.specialty}</span>
+                  <span className="text-teal-600 text-sm block mt-1">{trainer.specialty}</span>
                   <p className="text-gray-600 text-sm mt-3 leading-relaxed">{trainer.description}</p>
                 </div>
               </div>
